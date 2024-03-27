@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>MM-A Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="css/css-reset.css" rel="stylesheet" type="text/css"><!-- CSS Reset van Eric Mayer: Dit document reset alle browser defaults -->
+	<link href="css/mma-styles.css" rel="stylesheet" type="text/css"><!-- CSS file met daarin mijn eigen vormgeving -->
+    
+</head>
+<body>
+    <!-- Om alle elementen in de lijn te plaatsen heb ik een 12 column layout gebruikt, en inderdaad heb ik en 12 column overlay met checkbox ingezet om zeker te weten dat alles in alignment liggen.-->
+    <!-- De boven kant lig op de linker kant de logo en in het midden en de rechte kant de navigatie. -->
+    <!-- Verder heb ik  hero image maximaal breedte (1320px) maar alle andere elementen hebben 110px (ongeveer 6.9rem) padding op beide zeikanten. -->
+    <!-- Op de boven- en onderkant hebben zijn er een 5rem padding om voldoende whitespace maar soms is het kleiner, vooral op de paginas in de tweede of derde lag. -->
+    <!-- Er zijn nog een content onderdeel en eeen card-container met drie carden en een footer. -->
+
+     <!-- <input type="checkbox"> -->
+    <div class="wrapper">
+         <!-- <div id="grid">
+            <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+        </div> -->
+        <!-- Webpage header en navigatie -->
+        <header>
+            <div id="logo">
+                <img src="images/logo/logo-vogels.svg" alt="logo">
+            </div>
+            <!-- Voor de navigatie heb ik een twee-laagse dropdown menu gebruikt. Oorspronkelijk wilde ik drie-laagse navigatie gebruiken. Maar in de vogelgids zitten 28 vogelsoorten in totaal in de overige vogels groep, die de kleinste van de drie groepen is, zijn er 7 vogelsoorten. Dat is niet handig met drop-down navigatie. Daarom heb ik breadcrumb in de subpagina's in alle vogelgids pagina's. Verder op de vogelgids, zangvogels, watervogels en overige vogels pagina's heb ik een lijstje van de bijhorende vogelsoorten onder de hero section neergezet.  -->
+
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.htm" class="current" id="home">Home</a></li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-2" class="toggle">Vogelgids</label>
+                        <a href="pages/vogelgids/index.htm">Vogelgids <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-2">
+                        <ul>
+                            <li><a href="pages/vogelgids/herkenning.htm" id="recog">Herkenning</a></li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-5" class="toggle">Zangvogels</label>
+                                <a href="pages/vogelgids/zangvogels/index.htm">Zangvogels</a>
+                                <input type="checkbox" id="drop-5">
+                            </li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-4" class="toggle">Watervogels</label>
+                                <a href="pages/vogelgids/watervogels/index.htm">Watervogels</a>
+                                <input type="checkbox" id="drop-4">
+                            </li>
+                            <li>    
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-3" class="toggle">Overige vogels</label>
+                                <a href="pages/vogelgids/overige-vogels/index.htm">Overige vogels</a>
+                                <input type="checkbox" id="drop-3">
+                            </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-1" class="toggle">Activiteiten</label>
+                        <a href="pages/activiteiten/index.htm">Activiteiten <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="pages/activiteiten/vogelvoer.htm">Vogelvoer maken</a></li>
+                        <li><a href="pages/activiteiten/vetbollen.htm">Vetbollen maken</a></li>
+                        <li><a href="pages/activiteiten/nestkast.htm">Nestkast maken</a></li>
+                        <li><a href="pages/activiteiten/vogelfotografie.htm">Vogelfotografie</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="pages/contact/nuttige-info.htm">Nuttige Info</a></li>
+                  <li><a href="pages/contact/index.htm">Contact</a></li>
+                </ul>
+              </nav> 
+        </header>
+        <main>
+
+<!-- De layout van deze content onderdeel heb ik met float en clearfix opgelost omdat dat is wat op de les hebben geleerd. Deze CSS methode heb ik meerdere keer gebruikt overal de website. -->
+
+            <div class="hero">
+                <h2>Vogelsparadijs:<br>Stadshagen</h2>
+        	    <a class="button1" href="pages/contact/index.htm">Neem contact op</a>
+            </div>
+            <div class="text-box clearfix">
+                <div class="blok-img">
+                    <img src="images/activiteiten/vogelvoer/vogelvoer-001.jpg" alt="vogelvoer">
+                </div>
+                <div class="blok-text">
+                    <h3>Vogels in de achtertuin</h3><br>
+                    <h4>Een educatieve website voor kinderen</h4><br>
+                    <p>Kinderen kunnen heel enthousiast worden en ze zijn vaak heel actief. Daarom is het belangrijk om hun aandacht op de natuurbescherming te richten. Dit is de bedoeling van deze website.</p>
+                    <a class="button2" href="pages/activiteiten/index.htm">Lees meer</a>           
+                </div>    
+            </div>
+
+<!-- De layout van de card-container heb ik met css grid geregeld maar eerst heb ik inline-block geprobeerd om de method van de lessen te volgen. Omdat ik in-line block en ook button ik wilde gebruiken heb ik een foutje gekregen tijdens de validatie. Daarom heb ik de css grid optie gekozen. -->
+
+            <div class="card-container">
+                <div class="cards-head">
+                    <h3>Uitgelicht</h3>
+                    <h4>Leer interessante feiten over vogels</h4>   
+                </div>
+                <div class="card-grid">
+                    <article class="card a">
+                        <div class="img-box">
+                            <a href="pages/vogelgids/watervogels/blauwe-reiger.htm">
+                                <p>interessant</p>
+                            </a>
+                            <a href="pages/vogelgids/watervogels/blauwe-reiger.htm">
+                                <img src="images/vogelgids/blauwe-reiger/blauwe-reiger.jpg" alt="reiger">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h4>Stedelijke Vogels</h4><br>
+                            <p>In veel steden zijn blauwe reigers en ook andere vogelsoorten tegenwoordig niet erg bang voor mensen en daarom vliegen ze meestal niet weg.</p><br>
+                            <a class="button3" href="pages/vogelgids/watervogels/blauwe-reiger.htm">Lees meer</a>
+                        </div>
+                    </article>
+                    <article class="card b">
+                        <div class="img-box">
+                            <a href="pages/activiteiten/vogelvoer.htm">    
+                                <p>activiteit</p>
+                            </a>
+                            <a href="pages/activiteiten/vogelvoer.htm">
+                                <img src="images/activiteiten/vogelvoer/vogelvoer-maken-09.jpg" alt="vogelvoer">
+                            </a>
+                            </div>
+                        <div class="text">
+                            <h4>Zelfgemaakt vogelvoer</h4><br>
+                            <p>Er is over het algemeen genoeg voedsel te vinden voor de vogels, maar soms als het heel koud is of er weinig eten op de grond is, kan je vogels helpen met vogelvoer.</p><br>
+                            <a class="button3" href="pages/activiteiten/vogelvoer.htm">Lees meer</a>
+                        </div>
+                    </article>
+                    <article class="card c">
+                        <div class="img-box">
+                            <a href="pages/contact/nuttige-info.htm">
+                                <p>nuttige info</p>
+                            </a>
+                            <a href="pages/contact/nuttige-info.htm">
+                                <img src="images/stadshagen/stadshagen_zwolle.jpg" alt="rivier">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h4>Omgeving</h4><br>
+                            <p>Stadshagen ligt bij het Zwartewater (een rivier in Overijssel) en daarom zijn er heel veel watervogels in Stadshagen, zelfs in de sloten bij de huizen.</p><br>
+                            <a class="button3" href="pages/contact/nuttige-info.htm">Lees meer</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <!-- Webpage footer hier neerzetten. -->
+        
+        <!-- Om de layout van de footer vast te zetten heb ik ook CSS grid gebruikt. Volgens mij is deze de zekerste oplossing om een relatief zeker, netjes outline te krijgen-->
+
+
+        <footer class="footer-container">
+            <div class="footer top">
+                
+            </div>
+            <div class="footer left">
+                <h3>Contact</h3>
+                <p>Neem contact met ons op</p>
+                <form class="contactForm">
+                    <label for="customer_name"></label>
+                    <input type="text" name="customer_name" id="customer_name" placeholder="Volle naam" required >
+                    <label for="email_address"></label>
+                    <input type="email" name="email_address" id="email_address" placeholder="Jouw email adres">
+                    <label for="comments"></label>
+                    <textarea name="comments" id="comments" maxlength="500" rows="5" cols="50" placeholder="Jouw bericht"></textarea>
+                    <button type="button">Bevestig</button>
+                  </form>
+            </div>
+            <div class="footer center">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.htm" class="current">Home</a></li>
+                    <li><a href="pages/vogelgids/index.htm">Vogelgids</a></li>
+                    <li><a href="pages/activiteiten/index.htm">Activiteiten</a></li>
+                    <li><a href="pages/contact/nuttige-info.htm">Nuttige Info</a></li>
+                    <li><a href="pages/contact/index.htm">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer right">
+                <div id="logo-footer">
+                    <img src="images/logo/logo-vogels-footer.svg" alt="logo">
+                </div>
+                <div class="phone-footer">
+                    <span><i class="fa-solid fa-phone-flip"></i> &nbsp; 06 444 7777</span>
+                </div>
+                <div class="email-footer">
+                    <span><i class="fa-regular fa-envelope"></i> &nbsp; info@oudheid.com</span>
+                </div>
+                <div class="socials">
+                    <h4>Volg ons via social media</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    </div> 
+                </div>
+            </div>
+            <div class="footer rights">
+                <div class="rights">
+                    <ul class="copy-rights">
+                        <li>VogelsInDeAchtertuin</li>
+                        <li id="year">&copy; 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
