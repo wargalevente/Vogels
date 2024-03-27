@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>MM-A Watervogels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="../../../css/css-reset.css" rel="stylesheet" type="text/css"><!-- CSS Reset van Eric Mayer: Dit document reset alle browser defaults -->
+	<link href="../../../css/mma-styles.css" rel="stylesheet" type="text/css"><!-- CSS file met daarin mijn eigen vormgeving -->
+  
+</head>
+
+<!-- De hero image en veel plaatjes zijn eigen foto's!!! -->
+
+<!-- Op deze pagina is de layout vergelijkbaar naar de layout van de vogelgids/index.htm -->
+
+<body>
+    <!-- <input type="checkbox"> -->
+    <div class="wrapper">
+        <!-- <div id="grid">
+            <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+        </div> -->
+
+        <!-- Webpage header en navigatie hier neerzetten. -->
+        
+        <header>
+            <div id="logo">
+                <img src="../../../images/logo/logo-vogels.svg" alt="logo">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../../../index.htm" id="home">Home</a></li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-2" class="toggle">Vogelgids</label>
+                        <a href="../index.htm">Vogelgids <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-2">
+                        <ul>
+                            <li><a href="../herkenning.htm" id="recog">Herkenning</a></li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-5" class="toggle">Zangvogels</label>
+                                <a href="../zangvogels/index.htm">Zangvogels</a>
+                                <input type="checkbox" id="drop-5">
+                            </li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-4" class="toggle">Watervogels</label>
+                                <a href="../watervogels/index.htm" class="current">Watervogels</a>
+                                <input type="checkbox" id="drop-4">
+                            </li>
+                            <li>    
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-3" class="toggle">Overige vogels</label>
+                                <a href="../overige-vogels/index.htm">Overige vogels</a>
+                                <input type="checkbox" id="drop-3">
+                            </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-1" class="toggle">Activiteiten</label>
+                        <a href="../../activiteiten/index.htm">Activiteiten <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="../../activiteiten/vogelvoer.htm">Vogelvoer maken</a></li>
+                        <li><a href="../../activiteiten/vetbollen.htm">Vetbollen maken</a></li>
+                        <li><a href="../../activiteiten/nestkast.htm">Nestkast maken</a></li>
+                        <li><a href="../../activiteiten/vogelfotografie.htm">Vogelfotografie</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../../contact/nuttige-info.htm">Nuttige Info</a></li>
+                  <li><a href="../../contact/index.htm">Contact</a></li>
+                </ul>
+              </nav> 
+        </header>
+        <main>
+            <div class="hero-water">
+                <h1>Watervogels</h1>
+                <h2>Ontdek meer over watervogels</h2>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Zoek je vogelsoort.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <a href="../../contact/index.htm" class="button1">Neem contact op</a>
+            </div>
+            <div class="breadcrumb-bg">
+                <ul class="breadcrumb">
+                    <li><a href="../../../index.htm">Home</a></li>
+                    <li><a href="../index.htm">Vogelgids</a></li>
+                    <li><a href="index.htm" class="current">Watervogels</a></li>
+                  </ul>
+            </div>
+            <div class="zangvogels">
+                <h3>Vogelgids: Watervogels</h3>
+                <div class="gids clearfix">
+                    <figure class="mos vogel1">
+                        <a href="aalscholver.htm">
+                            <img src="../../../images/vogelgids/aalscholver/aalscholver-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="aalscholver.htm">Aalscholver</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel2">
+                        <a href="blauwe-reiger.htm">
+                            <img src="../../../images/vogelgids/blauwe-reiger/blauwe-reiger-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="blauwe-reiger.htm">Blauwe reiger</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel3">
+                        <a href="fuut.htm">
+                            <img src="../../../images/vogelgids/fuut/fuut-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="fuut.htm">Fuut</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel1">
+                        <a href="grauwe-gans.htm">
+                            <img src="../../../images/vogelgids/grauwe-gans/grauwe-gans-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="grauwe-gans.htm">Grauwe gans</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel2">
+                        <a href="canadese-gans.htm">
+                            <img src="../../../images/vogelgids/canadese-gans/canadese-gans-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="grauwe-gans.htm">Grote Canadese gans</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel3">
+                        <a href="grote-zilverreiger.htm">
+                            <img src="../../../images/vogelgids/grote-zilverreiger/grote-zilverreiger-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="grote-zilverreiger.htm">Grote zilverreiger</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel1">
+                        <a href="knobbelzwaan.htm">
+                            <img src="../../../images/vogelgids/knobbelzwaan/knobbelzwaan-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="knobbelzwaan.htm">Knobbelzwaan</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel2">
+                        <a href="kuifeend.htm">
+                            <img src="../../../images/vogelgids/kuif-eend/kuifeend-mosaic.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="kuifeend.htm">Kuifeend</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel3">
+                        <a href="kokmeeuw.htm">
+                            <img src="../../../images/vogelgids/kokmeeuw/kokmeeuw-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="kokmeeuw.htm">Kokmeeuw</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel3">
+                        <a href="scholekster.htm">
+                            <img src="../../../images/vogelgids/scholekster/scholekster-mosaic.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="scholekster.htm">Scholekster</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel1">
+                        <a href="waterhoen.htm">
+                            <img src="../../../images/vogelgids/waterhoen/waterhoen-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="waterhoen.htm">Waterhoen</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="mos vogel2">
+                        <a href="wilde-eend.htm">
+                            <img src="../../../images/vogelgids/wilde-eend/wilde-eend-vogelgids.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="vogelnaam">
+                            <a href="wilde-eend.htm">Wilde eend</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="card-container2">
+                <div class="cards-head">
+                    <h3>Ook interessant</h3>
+                    <h4>Bekijk ook zangvogels en overige vogels onze vogelgids</h4>   
+                </div>
+                <div class="card-grid">
+                    <article class="card a">
+                        <div class="img-box">
+                            <a href="../herkenning.htm">
+                                <img src="../../../images/vogelgids/vogelgids-unsplash.jpg" alt="reiger">
+                            </a>
+                            </div>
+                        <div class="text">
+                            <h4>Vogels herkennen</h4><br>
+                            <p>Herkenning van vogelen is het bekijken, op naam brengen, en tellen van vogels, het inventariseren van de vogels in gebieden, en het doen van onderzoek naar bijvoorbeeld gedrag en ecologie.</p><br>
+                            <a href="../herkenning.htm" class="button3">Lees meer</a>
+                        </div>
+                    </article>
+                    <article class="card b">
+                        <div class="img-box">
+                            <a href="../zangvogels/index.htm">
+                                <img src="../../../images/vogelgids/zangvogels.jpg" alt="vogelvoer">
+                            </a>
+                            </div>
+                        <div class="text">
+                            <h4>Zanngvogels</h4><br>
+                            <p>Pimpelmees, merel en roodborst. Vogels maken geluidjes om met elkaar te communiceren. Vogelzang is een soort taal die de mannetjes gebruiken om de vrouwtjes aan te trekken, maar ze kunnen elkaar ook waarschuwen met hun geluidjes.</p><br>
+                            <a href="../zangvogels/index.htm" class="button3">Lees meer</a>
+                        </div>
+                    </article>
+                    <article class="card c">
+                        <div class="img-box">
+                            <a href="../overige-vogels/index.htm">
+                                <img src="../../../images/vogelgids/overige-vogels-bg.jpg" alt="rivier">
+                            </a>
+                           </div>
+                        <div class="text">
+                            <h4>Overige vogels</h4><br>
+                            <p>Kraai, roek, kauw en roofvogels. Deze groep van vogels zijn die niet behoren tot de watervogels of zangvogels. Een heel diverse groep dus. Kraaien, roek, kauw eten zowel plantaardig als dierlijk voedsel. Roofvogels zijn over het algemeen vleesetende vogels die op een prooi jagen.
+                            </p><br>
+                            <a href="../overige-vogels/index.htm" class="button3">Lees meer</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <!-- Webpage footer hier neerzetten. -->
+        <footer class="footer-container">
+            <div class="footer top">
+                
+            </div>
+            <div class="footer left">
+                <h3>Contact</h3>
+                <p>Neem contact met ons op</p>
+                <form class="contactForm">
+                    <label for="customer_name"></label>
+                    <input type="text" name="customer_name" id="customer_name" placeholder="Volle naam" required >
+                    <label for="email_address"></label>
+                    <input type="email" name="email_address" id="email_address" placeholder="Jouw email adres">
+                    <label for="comments"></label>
+                    <textarea name="comments" id="comments" maxlength="500" rows="5" cols="50" placeholder="Jouw bericht"></textarea>
+                    <button type="button">Bevestig</button>
+                  </form>
+            </div>
+            <div class="footer center">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="../../../index.htm">Home</a></li>
+                    <li><a href="../index.htm">Vogelgids</a></li>
+                    <li><a href="../../activiteiten/index.htm">Activiteiten</a></li>
+                    <li><a href="../../contact/nuttige-info.htm">Nuttige Info</a></li>
+                    <li><a href="../../contact/index.htm">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer right">
+                <div id="logo-footer">
+                    <img src="../../../images/logo/logo-vogels-footer.svg" alt="logo">
+                </div>
+                <div class="phone-footer">
+                    <span><i class="fa-solid fa-phone-flip"></i> &nbsp; 06 444 7777</span>
+                </div>
+                <div class="email-footer">
+                    <span><i class="fa-regular fa-envelope"></i> &nbsp; info@oudheid.com</span>
+                </div>
+                <div class="socials">
+                    <h4>Volg ons via social media</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    </div> 
+                </div>
+            </div>
+            <div class="footer rights">
+                <div class="rights">
+                    <ul class="copy-rights">
+                        <li>VogelsInDeAchtertuin</li>
+                        <li id="year">&copy; 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

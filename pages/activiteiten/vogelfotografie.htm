@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>MM-A Vogelfotografie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="../../css/css-reset.css" rel="stylesheet" type="text/css"><!-- CSS Reset van Eric Mayer: Dit document reset alle browser defaults -->
+	<link href="../../css/mma-styles.css" rel="stylesheet" type="text/css"><!-- CSS file met daarin mijn eigen vormgeving -->
+    
+</head>
+
+<!-- Deze pagina is misschien de mooiste. De pagina bevat een hero-image, twee video's, een foto-mosaic en een foto-upload form. -->
+
+<!-- De hero image en alle plaatjes in de foto-mosaic zijn eigen foto's!!!  -->
+
+<body>
+
+    <!-- Om het commentaar over 12 column layout te lezen bekijk het commentaar van de activiteit pagina -->
+
+    <!-- <input type="checkbox"> -->
+    <div class="wrapper">
+        <!-- <div id="grid">
+            <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+        </div> -->
+        <!-- Webpage header en navigatie hier neerzetten. -->
+        <!-- Om het commentaar over de navigatie te lezen bekijk het commentaar van de  homepagina -->
+
+        <header>
+            <div id="logo">
+                <img src="../../images/logo/logo-vogels.svg" alt="logo">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../../index.htm" id="home">Home</a></li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-2" class="toggle">Vogelgids</label>
+                        <a href="../vogelgids/index.htm">Vogelgids <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-2">
+                        <ul>
+                            <li><a href="../vogelgids/herkenning.htm" id="recog">Herkenning</a></li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-5" class="toggle">Zangvogels</label>
+                                <a href="../vogelgids/zangvogels/index.htm">Zangvogels</a>
+                                <input type="checkbox" id="drop-5">
+                            </li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-4" class="toggle">Watervogels</label>
+                                <a href="../vogelgids/watervogels/index.htm">Watervogels</a>
+                                <input type="checkbox" id="drop-4">
+                            </li>
+                            <li>    
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-3" class="toggle">Overige vogels</label>
+                                <a href="../vogelgids/overige-vogels/index.htm">Overige vogels</a>
+                                <input type="checkbox" id="drop-3">
+                            </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-1" class="toggle">Activiteiten</label>
+                        <a href="index.htm">Activiteiten <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="vogelvoer.htm">Vogelvoer maken</a></li>
+                        <li><a href="vetbollen.htm">Vetbollen maken</a></li>
+                        <li><a href="nestkast.htm">Nestkast maken</a></li>
+                        <li><a href="vogelfotografie.htm" class="current">Vogelfotografie</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../contact/nuttige-info.htm">Nuttige Info</a></li>
+                  <li><a href="../contact/index.htm">Contact</a></li>
+                </ul>
+              </nav> 
+        </header>
+        <main class="vogelfoto-main">
+            <div class="hero-vogelvoer">
+                <h1>Vogelfotografie</h1>
+                <h2>Tips en nuttige info's</h2>
+                <div class="search-container">
+                    <!-- Search-bar. Om verder te lezen bekijk het commentaar van de homepagina pagina -->
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Zoeken.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <a href="../contact/index.htm" class="button1">Neem contact op</a>
+            </div>
+
+            <!-- Breadcrumb. Om verder te lezen bekijk het commentaar op de homepagina en de activiteit pagina -->
+
+            <div class="breadcrumb-bg">
+                <ul class="breadcrumb2">
+                    <li><a href="../../index.htm">Home</a></li>
+                    <li><a href="indexhtm">Activiteiten</a></li>
+                    <li><a href="vogelfotografie.htm" class="current">Vogelfotografie</a></li>
+                </ul>
+            </div>
+
+            <!-- Youtube-video over vogelfotografie. Om over de video's verder te lezen bekijk het commentaar op de homepagina en de activiteit pagina -->
+
+            <div class="video-nestkast">
+                <h3>Vogelfotografie is niet zo moeilijk.<br>Kijk video voor tips en advies:</h3>
+                <div class="video-play">
+                    <iframe src="https://www.youtube.com/embed/VQnSJytWU48?si=20zmNe9of32OQtD-" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="media2 clearfix">
+
+                <!-- Nog een leuke youtube-video over vogelfotografie. Om verder te lezen bekijk het commentaar op de nestkast pagina -->
+
+                <div class="media2-img">
+                    <iframe src="https://www.youtube.com/embed/YNkwHAeNjps?si=vNwW5wxbcZnlroIc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="media4-text">
+                    <h3>Vogelfotografie</h3>
+                    <p>Vogelfotografie, vooral voor kinderen, kan heel intimiderend zijn. Maar bij het begin kan je het met je ouders doen. Een geschikte lens om scherpe foto's van bijvoorbeeld zangvogels te maken is heel duur. Maar je kan voor een of twee dagen huren. Kijk eens de video's hoe je dat kan beginnen. Lensen geschikt voor vogelfotografie zijn kan ook best zwaar zijn. Daarom hier zijn paar adviezen:</p>
+                    <ul>
+                        <li>Begin met simpele onderwerpen bijvoorbeeld zwaan, wilde eend of ganzen.</li>
+                        <li>Word geinspireerd op andere foto's of online video's</li>
+                        <li>Voor je begin te fotograveren is het handig om vogels zelf te observeren.</li>
+                    </ul> 
+                </div>    
+            </div>
+
+            <!-- Een foto-gallery in mosaic-layout om de bezoekers te inspireren. -->
+            <div class="gallery">
+                <h3>Onze beste foto's deze maand</h3>
+                <div class="pic one">
+                    <img src="../../images/vogelgids/aalscholver/aalscholver-mosaic.jpg" alt="vogel">
+                </div>
+                <div class="pic two">
+                    <img src="../../images/vogelgids/kuif-eend/kuifeend-mosaic.jpg" alt="vogel">
+                </div>
+                <div class="pic three">
+                    <img src="../../images/vogelgids/koolmees/koolmees-mosaic.jpg" alt="vogel">
+                </div>
+                <div class="pic four">
+                    <img src="../../images/vogelgids/blauwe-reiger/blauwe-reiger-mosaic.jpg" alt="vogel">
+                </div>
+                <div class="pic five">
+                    <img src="../../images/vogelgids/scholekster/scholekster-mosaic.jpg" alt="vogel">
+                </div>
+            </div>
+
+            <!-- Een hier zit een form om foto's te uploaden met datum, bestand-pload, en twee check-boxen. Het was helemaal niet makkelijk maar wel gelukt. -->
+
+            <form action="/action_page.php" id="imgUpload" accept-charset="utf-8" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend class="legend">Upload hier jouw favoriete vogelfoto</legend>
+                    <div id="bestand">
+                        <label for="vogelimg" id="vogelLabel">Kiez een bestand</label>
+                        <input type="file" id="vogelimg" name="vogelimg" accept="image/*">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="legend">Over jouw foto</legend>
+                    <div id="foto">
+                        <input type="text" name="foto-title" id="foto-title" placeholder="Geef een titel van je foto">
+                        <input type="text" name="foto-name" id="foto-name" placeholder="Naam van de vogel" title="Voer de Nederlandse of de Latijnse naam van de vogel in" required>
+                        <input type="text" name="locatie" id="locatie" placeholder="Waar heb je de foto gemaakt (optioneel)" title="Geef een plaatsnaam, een naam van een gemeente of een stad op" required>
+                        <input type="text" placeholder="Wanneer heb je de foto genomen" title="Voer een datum in wanner je de foto hebt genomen" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <textarea name="message" id="message" maxlength="500" rows="8" cols="100" placeholder="Geef een omschrijving van je foto" title="Voer in de bijzonderheden van de foto in."></textarea>
+                    </div>
+                    </fieldset>
+                <fieldset>
+                    <legend class="legend">Jouw gegevens</legend>
+                    <div id="details">
+                        <input type="text" name="customer_name" id="first-name" placeholder="Voornaam" required>
+                        <input type="text" name="customer_name" id="tussen" placeholder="Tussenvoegsel">
+                        <input type="text" name="customer_name" id="last-name" placeholder="Achternaam" required>
+                        <input type="email" name="email-address" id="email-address" placeholder="Email adres">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="legend">Versturen</legend>
+                    <div id="check">
+                        <input type="checkbox" id="consent1" name="consent1" value="Ja, VogelsInDeAchtertuin mag mijn foto gebruiken voor zijn eigen middelen en online media.">
+                        <label for="consent1">Ja, VogelsInDeAchtertuin mag mijn foto gebruiken voor zijn eigen middelen en online media.</label><br>
+                        <input type="checkbox" id="consent2" name="consent2" value="Deze foto voldoet aan de voorwaarden voor verantwoorde vogelfotografie.">
+                        <label for="consent1">Deze foto voldoet aan de voorwaarden voor verantwoorde vogelfotografie.</label><br>
+                        <button type="submit">Upload</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <!-- Drie carden layout -->
+            <!-- Om verder te lezen bekijk het commentaar op de homepagina -->
+
+            <div class="zangvogels3">
+                <h2>Uitgelicht</h2>
+                <h3>Ontdek activiteiten in verband met vogels</h3>
+                <div class="gids clearfix">
+                    <figure class="kaart1 vogel1">
+                        <a href="vetbollen.htm">
+                            <img src="../../images/activiteiten/vetbollen/vetbollen-zelfgemaakt.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="caption2"><a href="vetbollen.htm">Vetbollen maken</a></figcaption>
+                    </figure>
+                    <figure class="kaart1 vogel2">
+                        <a href="vogelvoer.htm">
+                            <img src="../../images/activiteiten/vogelvoer/vogelvoer-maken-01.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="caption2"><a href="vogelvoer.htm">Vogelvoer maken</a></figcaption>
+                    </figure>
+                    <figure class="kaart1 vogel3">
+                        <a href="nestkast.htm">
+                            <img src="../../images/activiteiten/nestkast/nestkast-diy.jpg" alt="vogel">
+                        </a>
+                        <figcaption class="caption2"><a href="nestkast.htm">Nestkast maken</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Webpage footer hier neerzetten. -->
+
+        <!-- Om het commentaar over de footer te lezen bekijk het commentaar op de homepagina -->
+
+        <footer class="footer-container">
+            <div class="footer top">
+                
+            </div>
+            <div class="footer left">
+                <h3>Contact</h3>
+                <p>Neem contact met ons op</p>
+                <form class="contactForm">
+                    <label for="customer_name"></label>
+                    <input type="text" name="customer_name" id="customer_name" placeholder="Volle naam" required >
+                    <label for="email_address"></label>
+                    <input type="email" name="email_address" id="email_address" placeholder="Jouw email adres">
+                    <label for="comments"></label>
+                    <textarea name="comments" id="comments" maxlength="500" rows="5" cols="50" placeholder="Jouw bericht"></textarea>
+                    <button type="button">Bevestig</button>
+                  </form>
+            </div>
+            <div class="footer center">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="../../index.htm">Home</a></li>
+                    <li><a href="../vogelgids/index.htm">Vogelgids</a></li>
+                    <li><a href="../activiteiten/index.htm">Activiteiten</a></li>
+                    <li><a href="../contact/nuttige-info.htm">Nuttige Info</a></li>
+                    <li><a href="../contact/index.htm">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer right">
+                <div id="logo-footer">
+                    <img src="../../images/logo/logo-vogels-footer.svg" alt="logo">
+                </div>
+                <div class="phone-footer">
+                    <span><i class="fa-solid fa-phone-flip"></i> &nbsp; 06 444 7777</span>
+                </div>
+                <div class="email-footer">
+                    <span><i class="fa-regular fa-envelope"></i> &nbsp; info@oudheid.com</span>
+                </div>
+                <div class="socials">
+                    <h4>Volg ons via social media</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    </div> 
+                </div>
+            </div>
+            <div class="footer rights">
+                <div class="rights">
+                    <ul class="copy-rights">
+                        <li>VogelsInDeAchtertuin</li>
+                        <li id="year">&copy; 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

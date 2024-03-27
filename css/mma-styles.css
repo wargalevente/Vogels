@@ -1,0 +1,3399 @@
+@charset "UTF-8";
+
+/* De width en height worden berekend aan de hand van content, INCLUSIEF eventuele extra padding en border eigenschappen. */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%; /* Font-size van het root-element opgeven, zodat we kunnen rekenen met de REM-unit. 100% komt overeen met 14 à 16 pixels */
+}
+
+/* Een paar algemeene eigenschap:
+
+-- op de zeikanten de padding bijna altijd 9.6rem (rond 110px)
+-- hero-images zijn bijna altijd gemixed (background-blend-mode) met de achtergrond-kleur (background-color) om de text op de hero-image beter leesbaar te maken.
+-- images en tekst die zogenaamd clickable zijn (kan aangeklikt worden) hebben bijna altijd een hover effect
+
+*/
+
+body {
+	color: #fff;
+	font-family: 'Andika', sans-serif;
+	text-align: center;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	grid-gap: 0px;
+	margin: 0 auto;
+	width: 1320px;
+	position: relative;
+	background: rgba(252, 238, 231, 1);
+	
+}
+.wrapper > * {
+	padding: 0px;
+}
+header {
+	grid-column: 1/13;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-auto-rows: minmax(100%, auto);
+	width: 100%;
+	height: 120px;
+
+}
+#logo {
+	grid-column: 1/4;
+	display: flex;
+}
+nav {
+	grid-column: 4/13;
+	display: grid;
+	align-content: center;
+	justify-content: right;
+	padding-right: 5.7rem;
+}
+main {
+	grid-column: 1/13;
+	grid-row: 2/6;
+	display: grid;
+}
+footer {
+	grid-column: 1/13;
+}
+#grid {
+	display: grid;
+	position: absolute;
+	top: 0;
+	left: 0;
+	grid-template-columns: repeat(12, 1fr);
+	grid-auto-rows: minmax(100%, auto);
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	padding: 0;
+	display: none;
+}
+#grid p {
+	border: 1px solid magenta;
+	margin: 0;
+	opacity: 0.4;
+
+}
+input:checked + .wrapper #grid {
+	display: grid;
+}
+#logo img {
+	height: 100px;
+	margin: 0px;
+	justify-self: start;
+	align-self: center;
+	margin-left: 6.9rem;
+}
+.toggle,
+[id^=drop] {
+  display: none;
+}
+nav:after {
+	content: "";
+	display: table;
+	clear: right;
+}
+nav ul {
+	float: right;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}	
+
+nav ul li {
+	margin: 1.2rem;
+	float: left;
+	background: rgba(252, 238, 231, 0.8);
+}
+nav a {
+	display: block;
+	padding: 0 1.5rem;
+	color: #000;
+	font-size: 1.2rem;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+nav ul li ul li:hover {
+	background: rgba(57, 123, 183, 1);
+}
+ 
+nav a:hover {
+	background-color: rgba(57, 123, 183, 1);
+}
+
+nav a.current {
+	background-color: rgba(77, 161, 238, 1);
+}
+
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px;
+}
+
+nav ul li:hover>ul {
+	display: inherit;
+}
+
+nav ul ul li {
+	width: 200px;
+	float: none;
+	display: list-item;
+	position: relative;
+
+}
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 170px;
+}
+li>a:after {
+	content: '';
+}
+li>a:only-child:after {
+	content: '';
+}
+
+.menu {
+	place-self: center;
+}
+
+.hero {
+	width: 100%;
+	height: 500px;
+	background-color: #a2c5f5;
+	background-image: linear-gradient(rgba(252, 238, 231, 0.2), rgba(247, 199, 170, 0.2)), url("../images/vogelgids/aalscholver/aalscholver_stadshagen09.jpg");
+	background-position: bottom;
+	background-size: cover;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	padding-left: 6.9rem;
+	display: grid;
+	justify-content: left;
+}
+.hero > .button1 {
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+  	transition: 0.3s;
+	text-decoration: none;
+}
+
+.hero > .button1:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.hero h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	line-height: 4rem;
+	text-align: left;
+}
+.text-box {
+	background-color: white;
+	padding: 5rem 6.9rem;
+	width: 1320px;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+}
+.blok-text {
+	background-color:#fceee7;
+	color:#000;
+	width: 730px;
+	height: 350px;
+	padding: 3rem 4rem;
+	text-align: left;
+	float: right;
+	display: grid;
+	
+}
+
+.blok-text > h3,
+.blok-text > h4 {
+	margin-bottom: 1rem;
+}
+
+.blok-text > p {
+	margin-bottom: 2.5rem;
+}
+
+.blok-text > .button1 {
+	float: right;
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.blok-text > .button1:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.blok-img {
+	background-color: #B77539;
+	width: 350px;
+	height: 350px;
+	margin-right: 0rem;
+	float: left;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+  
+
+.blok-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.blok-text > .button2 {
+	align-self: end;
+}
+
+.button2 {
+	background: linear-gradient(rgba(234, 151, 75, 0.9), rgba(234, 151, 75, 0.9));
+	border: 1px solid rgba(234, 151, 75, 0.9);
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: -.022em;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.button2:hover {
+	background: linear-gradient(rgba(57, 123, 183, 0.7), rgba(38, 87, 131, 0.7));
+	border: 1px solid rgba(57, 123, 183, 0.7);
+}
+
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 1rem;
+	text-align: left;
+}
+h4 {
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.2rem;
+	margin-bottom: .5rem;
+	color: #000;
+}
+p {
+	font-size: 0.9rem;
+	font-style: normal;
+	line-height: 1.2rem;
+}
+
+.card-container { 
+	padding: 5rem 6.7rem 5rem 6.9rem;
+	background-image: linear-gradient(rgba(247, 199, 170, 0.8), rgba(247, 199, 170, 0.8)), url("../images/stadshagen/vogels-vijver-bg.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 21px;
+	align-items: stretch;
+	width: 100%;
+}
+
+
+.card-grid > .card {
+	width: 350px;
+	height: 500px;
+	border: 1px solid #ccc;
+	border-radius: 25px;
+	box-shadow: 2px 2px 6px 0px  rgba(21, 53, 83, 0.5);
+	justify-items: center;
+	padding: 0.6rem;
+	position: relative;
+	background-color: #e2ebfb;
+}
+
+.card h4 {
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: #000;
+}
+
+.card p {
+	font-size: 0.8rem;
+	font-style: normal;
+	color: #000;
+	text-align: left;
+}
+
+.img-box {
+	display: block;
+	width: 330px;
+	height: 240px;
+	position: relative;
+}
+
+.img-box p {
+	width: 80px;
+	border-radius: 18px 0px 0px 0px;
+	background-color: rgba(234, 151, 75, 0.9);
+	position: absolute;
+	line-height: 1.5rem;
+	padding-left: 0.5rem;
+	color: #fff;
+}
+
+.img-box p:hover {
+	background: #b77539;
+	border: 1px solid #b77539;
+}
+
+.img-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 18px 18px 0px 0px;
+}
+
+.img-box > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 18px 18px 0px 0px;
+}
+
+.img-box img:hover {
+	opacity:0.5 ;
+}
+
+.img-box iframe {
+	width: 100%;
+	height: 100%;
+
+}
+
+.text {
+	padding: 1rem 0rem;
+	color: #000;
+	position: absolute;
+	top: 260px;
+	width: 330px;
+	height: 230px;
+}
+
+.text > .button3 {
+	background: linear-gradient(rgba(234, 151, 75, 0.9), rgba(234, 151, 75, 0.9));
+	border: 0;
+	border-radius: 10px;
+	color: white;
+	padding: 0.6rem;
+	width: 150px;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	text-decoration: none;
+}
+
+.text > .button3:hover {
+	background: #b77539;
+	border: 1px solid #b77539;
+}
+
+.footer-container {
+	display: grid;
+	grid-template-columns: 36% 28% 36%;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 0px;
+	margin: 0 auto;
+	width: 1320px;
+	background-color: #061727;
+}
+
+.footer > * {
+	color: white;
+	text-align: left;
+	line-height: 2rem;
+}
+
+.top {
+	grid-column: 1/4;
+}
+
+.left {
+	grid-column: 1/2;
+	grid-row: 2/6;
+	padding-left: 6.9rem;
+}
+
+.left h3,
+.center h3,
+.right h3 {
+	font-size: 1.5rem;
+	line-height: 1rem;
+	color: white;
+}
+
+.left > p {
+	font-size: 1.1rem;
+	margin: 1rem 0rem 0.7rem 0rem;
+}
+
+.contactForm {
+	width: 350px;
+    display: grid;
+    grid-template-columns: [controls] 100%;
+    grid-auto-flow: row;
+    grid-gap: .8rem;
+    background: #061727;
+    
+}
+.contactForm > label  {
+    grid-column: labels;
+    grid-row: auto;
+}
+.contactForm > input {
+    grid-column: controls;
+    grid-row: auto;
+    border: none;
+    padding: 0.9rem;
+}
+
+.contactForm > textarea {
+    grid-column: controls;
+    grid-row: auto;
+    border: none;
+    padding: 0.9rem;
+}
+
+.contactForm > input::placeholder,
+.contactForm > textarea::placeholder {
+	font-family: 'Andika', sans-serif;
+	font-size: 0.8rem
+}
+
+.contactForm > button {
+    grid-column: controls;
+    grid-row: auto;
+    background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+}
+
+.contactForm > button:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.center {
+	grid-column: 2/3;
+	grid-row: 2/6;
+	padding: 0rem 3rem 0rem 7.5rem;
+}
+
+.center li {
+	margin: 0.7rem 0rem 2.55rem 0rem;
+	
+}
+
+.center li a {
+	text-decoration: none;
+	color: white;
+	margin-left: 4rem;
+	font-size: 1.1rem;
+
+}
+
+.center li a:hover {
+	color: #ea974b;
+	transition: all .3s;
+	text-decoration: underline;
+}
+
+.center li a:active {
+	text-decoration: underline;
+}
+
+.center li a.current {
+	color: #f7c7aa;
+	transition: all .3s;
+}
+
+.right {
+	grid-column: 3/4;
+	grid-row: 2/6;
+	padding: 0rem 1.1rem;
+}
+
+#logo-footer img {
+	height: 100px;
+}
+
+.phone-footer {
+	margin: 0rem 0rem 2.4rem 0rem;
+}
+
+.email-footer {
+	margin: 0rem 0rem 2.9rem 0rem;
+}
+
+.socials > h4 {
+	font-size: 1.1rem;
+	font-family: Andika, sans-serif;
+	color: #fff;
+	font-style: normal;
+	margin: 0rem 0rem 2.4rem 0rem;
+}
+
+.socials .footer-socials a {
+	width: 40px;
+	height: 40px;
+	margin-right: 3rem;
+	margin-top: .3rem;
+	text-align: center;
+	display: inline-block;
+	font-size: 2em;
+	color: white;
+	transition: all .3s;
+
+}
+.socials .footer-socials a:hover {
+	color: orange;
+	transition: all .3s;}
+
+
+.bottom {
+	grid-column: 1/4;
+}
+
+.rights {
+	grid-column: 1/13;
+	background-color: #222;
+	display: grid;
+	align-items: center;
+	
+}
+
+.rights > ul {
+	padding-left: 6.9rem;
+}
+	
+.rights ul li {
+	display: inline-block;
+	padding-right: 8rem;
+	
+}
+	
+.page-title {
+	width: 100%;
+	height: 400px;
+	padding: 3.2rem 6.9rem;
+	background-color: #ea974b;
+	background-image: url(../images/vogelgids/wilde-eend/wilde-eend.jpg);
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.page-title > h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	line-height: 4rem;
+	text-align: left;
+	color: #000;
+}
+
+.page-title > h3 {
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	line-height: 2rem;
+	margin: 0rem;
+	padding: 0rem;
+}
+
+.page-title .search-container {
+	float: left;
+}
+
+.page-title input[type=text] {
+	padding: .7rem 2rem;
+	margin-top: .5rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 25px 0px 0px 25px;
+}
+  
+.page-title .search-container button {
+	float: right;
+	padding: .7rem 1rem;
+	margin-top: .5rem;
+	margin-right: 0px;
+	background: #ddd;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px 25px 25px 0px;
+}
+  
+.page-title .search-container button:hover {
+	background: #4da1ee;
+}
+
+.page-title .button1 {
+	float: right;
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.page-title .button1:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.page-title > .clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.page-title > h2,
+.page-title > h3,
+.page-title > .search-button {
+	margin: 1.5rem 0rem;
+	color: #fff;
+}
+
+.vogels {
+	padding: 4rem 6rem;
+	background-color: #e2ebfb;
+}
+
+.vogels > h3 {
+	font-size: 2rem;
+	margin: 0rem .78rem 1rem .78rem;
+}
+
+.vogelgids {
+	float: left;
+	width: 160px;
+	height: 110px;
+	margin: 1.9rem .875rem;
+	color: #000;
+	position: relative;
+}
+
+.vogelgids > a > img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.vogelgids > figcaption {
+	background-color: #ea974b;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	bottom: -32px;
+	display: grid;
+	align-items: center;
+}
+
+
+.vogelgids > a {
+	text-decoration: none;
+}
+
+.vogelgids > a:hover {
+	opacity: 0.5;
+}
+
+.vogelgids > figcaption > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.vogelgids > figcaption > a:hover {
+	color: #397BB7;
+}
+
+.vogels > .v25 {
+	margin: 1.7rem .875rem 1.7rem 12.625rem;
+}
+
+.media1 {
+	background-color: #fceee7;
+	padding: 5rem 6.9rem;
+	width: 1320px;
+	margin: 0 auto;
+
+	/*overflow: hidden;*/
+}
+.media1-text {
+	background-color:#e2ebfb;
+	color: #000;
+	width: 540px;
+	height: 350px;
+	padding: 2.7rem 4rem;
+	text-align: left;
+	float: right;
+	display: grid;
+	align-items: stretch;
+}
+.media1-img {
+	background-color: #B77539;
+	width: 540px;
+	height: 350px;
+	margin-right: 0rem;
+	float: left;
+}
+
+.media1-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.media1-img img:hover {
+	opacity: 0.5;
+}
+
+.media2 {
+	background-color: #fdfdfd;
+	padding: 5rem 6.9rem;
+	width: 100%;
+	margin: 0 auto;
+
+	/*overflow: hidden;*/
+}
+.media2-text {
+	background-color:#fceee7;
+	color: #000;
+	width: 540px;
+	height: 350px;
+	padding: 2.7rem 4rem;
+	text-align: left;
+	float: left;
+	display: grid;
+	align-items: stretch;
+}
+.media2-img {
+	background-color: #B77539;
+	width: 540px;
+	height: 350px;
+	margin-right: 0rem;
+	float: right;
+}
+
+.media2-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.media2-img img:hover {
+	opacity: 0.5;
+}
+
+.hero-activiteit {
+	width: 100%;
+	height: 500px;
+	background-color: #ea974b;
+	background-image: url("../images/activiteiten/hero-activiteiten.jpg");
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: darken;
+	padding: 5rem 6.9rem;
+	display: grid;
+	align-content: stretch;
+	justify-items: right;
+	text-align: right;
+}
+
+.hero-activiteit .button1 {
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+}
+
+.hero-activiteit .button1:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.hero-activiteit h1 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.hero-activiteit h2 {
+	font-size: 1.8rem;
+	font-weight: bold;
+	font-style: italic;
+	color: #fff;
+}
+
+.hero-activiteit .search-container {
+	margin: 0rem;
+}
+
+.hero-activiteit input[type=text] {
+	padding: .7rem 2rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 25px 0px 0px 25px;
+  }
+  
+.hero-activiteit .search-container button {
+	float: right;
+	padding: .7rem 1rem;
+	background: #ddd;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px 25px 25px 0px;
+}
+  
+.hero-activiteit .search-container button:hover {
+	background: #4da1ee;
+}
+
+ul.breadcrumb {
+	padding: 0.3rem 1rem 0.6rem 6.9rem;
+	list-style: none;
+	background-color: #e2ebfb;
+	text-align: left;
+}
+
+ul.breadcrumb li {
+	display: inline;
+	font-size: 18px;
+	
+}
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "\203A";
+}
+ul.breadcrumb li a {
+	color: #000;
+	text-decoration: none;
+	font-family: Andika, sans-serif;
+	font-weight: bold;
+}
+
+ul.breadcrumb li a.current {
+	color: #666;
+	transition: all .3s;
+}
+
+ul.breadcrumb li a:hover {
+	color: #ea974b;
+	text-decoration: underline;
+}
+
+ul.breadcrumb2 {
+	padding: 0.3rem 1rem 0.6rem 6.9rem;
+	list-style: none;
+	background-color: #fceee7;
+	text-align: left;
+}
+
+ul.breadcrumb2 li {
+	display: inline;
+	font-size: 18px;
+	
+}
+ul.breadcrumb2 li+li:before {
+	padding: 8px;
+	color: black;
+	content: "\203A";
+}
+ul.breadcrumb2 li a {
+	color: #000;
+	text-decoration: none;
+	font-family: Andika, sans-serif;
+	font-weight: bold;
+}
+
+ul.breadcrumb2 li a.current {
+	color: #666;
+	transition: all .3s;
+}
+
+ul.breadcrumb2 li a:hover {
+	color: #ea974b;
+	text-decoration: underline;
+}
+
+ul.breadcrumb3 {
+	padding: 0.3rem 1rem 0.6rem 6.9rem;
+	list-style: none;
+	background-color: #fdfdfd;
+	text-align: left;
+}
+
+ul.breadcrumb3 li {
+	display: inline;
+	font-size: 18px;
+	
+}
+ul.breadcrumb3 li+li:before {
+	padding: 8px;
+	color: black;
+	content: "\203A";
+}
+ul.breadcrumb3 li a {
+	color: #000;
+	text-decoration: none;
+	font-family: Andika, sans-serif;
+	font-weight: bold;
+}
+
+ul.breadcrumb3 li a.current {
+	color: #666;
+	transition: all .3s;
+}
+
+ul.breadcrumb3 li a:hover {
+	color: #ea974b;
+	text-decoration: underline;
+}
+
+/*
+ul.breadcrumb2 {
+	padding: 10px 16px;
+	list-style: none;
+	background-color: #e2ebfb;
+	text-align: left;
+}
+ul.breadcrumb2 li {
+	display: inline;
+	font-size: 18px;
+	
+}
+ul.breadcrumb2 li+li:before {
+	padding: 8px;
+	color: black;
+	content: "\203A";
+}
+ul.breadcrumb2 li a {
+	color: #153553;
+	text-decoration: none;
+	font-family: Andika, sans-serif;
+	font-weight: bold;
+}
+ul.breadcrumb2 li a:hover {
+	color: #397BB7;
+	text-decoration: underline;
+}
+
+ul.breadcrumb2 li a.current {
+	color: #265783;
+	transition: all .3s;
+}
+*/
+
+.media3 {
+	background-color: #fdfdfd;
+	padding: 5rem 6.9rem;
+	width: 1320px;
+	margin: 0 auto;
+	position: relative;
+	
+	/*overflow: hidden;*/
+}
+
+.media3 a {
+	text-decoration: none;
+}
+
+.media3 h3 {
+	color: #fff;
+	text-align: center;
+	
+}
+
+.media3 h3:hover {
+	color: #4da1ee;
+}
+
+.media3-img1 {
+	width: 540px;
+	height: 350px;
+	background-color: #ea974b;
+	background-image: url(../images/activiteiten/nestkast/nestkast.jpg);
+	background-position: center;
+	background-blend-mode: multiply;
+	margin-right: 0rem;
+	float: left;
+	display: grid;
+	align-content: end;
+}
+
+.media3-imgbox {
+	width: 540px;
+	height: 350px;
+	float: right;
+	display: grid;
+}
+
+.media3-img2 {
+	width: 100%;
+	height: 165px;
+	background-color: #ea974b;
+	background-image: url(../images/activiteiten/vogelvoer/vogelvoer-maken-01.jpg);
+	background-position: center;
+	background-blend-mode: multiply;
+	margin-right: 0rem;
+	align-self: self-start;
+	display: grid;
+	align-content: end;
+}
+
+.media3-img3 {
+	width: 100%;
+	height: 165px;
+	background-color: #ea974b;
+	background-image: url(../images/activiteiten/vogelfotografie.jpg);
+	background-position: center;
+	background-blend-mode: multiply;
+	margin-right: 0rem;
+	align-self: self-end;
+	display: grid;
+	align-content: end;
+
+}
+
+.text-box2 {
+	background-color: #fceee7;
+	padding: 5rem 6.9rem;
+	width: 1320px;
+	margin: 0 auto;
+	
+	/*overflow: hidden;*/
+}
+
+.blok2-text {
+	background-color:#e2ebfb;
+	color:#000;
+	width: 730px;
+	height: 350px;
+	padding: 3.4rem 4rem;
+	text-align: left;
+	float: left;
+	display: grid;
+	align-content: space-between;
+}
+
+.blok2-text h3, .blok2-text h4{
+	margin: 0;
+}
+
+.blok2-text > ul {
+	column-count: 2;
+	list-style-type: circle;
+	margin-left: 1rem;
+}
+
+.blok2-text > ul li{
+	text-decoration: dotted;
+
+}
+
+.blok2-img {
+	background-color: #B77539;
+	width: 350px;
+	height: 350px;
+	margin-right: 0rem;
+	float: right;
+}
+
+.blok2-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-container2 { 
+	padding: 5rem 6.7rem 5rem 6.9rem;
+	background-image: linear-gradient(rgba(247, 199, 170, 0.8), rgba(247, 199, 170, 0.8)), url("../images/stadshagen/stadshagen-bg.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.card-container2 > .cards-head > h3,
+.card-container2 > .cards-head > h4 {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.card-container2 .text {
+	padding: 0rem 0rem;
+	color: #000;
+	position: absolute;
+	top: 260px;
+	width: 330px;
+	height: 230px;
+}
+
+.card-container2 .text > .button3 {
+	background: linear-gradient(rgba(234, 151, 75, 0.9), rgba(234, 151, 75, 0.9));
+	border: 0;
+	border-radius: 10px;
+	color: white;
+	padding: 0.6rem;
+	width: 150px;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	text-decoration: none;
+}
+
+.card-container2 .text > .button3:hover {
+	background: #b77539;
+	border: 1px solid #b77539;
+}
+
+.card-container2 .text > p {
+	margin: 0;
+	padding: 0;
+}
+
+.hero-vogelvoer {
+	width: 100%;
+	height: 300px;
+	background-color: #ddd;
+	background-image: url(../images/activiteiten/vogelvoer/vogelvoer-bg.jpg);
+	background-blend-mode: overlay;
+	background-position: center;
+	color: #000;
+	text-align: left;
+	padding: 6rem 6.9rem;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: minmax(20px, auto);
+}
+
+.hero-vogelvoer h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	grid-column: 1 / 5;
+	grid-row: 1 / 3;
+}
+
+.hero-vogelvoer > h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	grid-column: 1 / 5;
+	grid-row: 4 / 5;
+	line-height: normal;
+	text-align: left;
+	margin: 0;
+}
+
+.hero-vogelvoer .button1 {
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 220px;
+	height: 36px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	grid-column: 9 / 11;
+	grid-row: 4 /5;
+	place-self: end;
+	text-decoration: none;
+}
+
+.hero-vogelvoer .button1:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.hero-vogelvoer .search-container {
+	justify-self: right;
+	grid-column: 8 / 11;
+	grid-row: 1 / 2;
+}
+
+.hero-vogelvoer input[type=text] {
+	width: 200px;
+	padding: .7rem 2rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 25px 0px 0px 25px;
+	
+  }
+
+.hero-vogelvoer .search-container button {
+	float: right;
+	padding: .7rem 1rem;
+	margin-right: 0px;
+	background: #ddd;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px 25px 25px 0px;
+}
+  
+.hero-vogelvoer .search-container button:hover {
+	background: #4da1ee;
+}
+
+.video-vogelvoer {
+	width: 100%;
+	height: auto;
+	padding: 3rem 6.9rem 5rem 6.9rem;
+	text-align: left;
+}
+
+.video-vogelvoer > h3 {
+	text-align: left;
+	line-height: 1.6rem;
+	margin-bottom: .5rem;
+}
+
+.video-vogelvoer > .video-play {
+	width: 1100px;
+	height: auto;
+}
+
+.video-vogelvoer > .video-play video {
+	width: 1100px;
+}
+
+.media4-text {
+	background-color:#fceee7;
+	color: #000;
+	width: 540px;
+	height: 350px;
+	padding: 2rem 3rem;
+	text-align: left;
+	display: grid;
+	align-items: center;
+	margin: 0;
+}
+
+.media4-text > h3,
+.media4-text > h4  {
+	margin: 0rem;
+}
+
+
+.media4-text > h3  {
+	font-size: 1.6rem;
+	font-weight: bold;
+	line-height: 1.8rem;
+	align-self: self-start;
+}
+
+.media4-text > h4  {
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.1rem;
+}
+
+.media4-text > ol {
+	margin: 0;
+	padding: 0;
+	align-self: end;
+}
+
+.media4-text ol li {
+	list-style: decimal;
+	margin: .5rem 0rem .5rem 1.3rem;
+}
+
+.media4-text > ul li {
+	font-size: 1rem;
+	list-style: circle;
+	margin: .5rem 0rem .5rem 1rem;
+}
+
+.media4-text > p {
+	font-size: 1rem;
+}
+
+.vetbollen > .zangvogels3 {
+	padding: 5rem 5.6rem;
+	background-color: #fceee7;
+}
+
+.video-vetbollen {
+	width: 100%;
+	height: auto;
+	padding: 3rem 6.9rem 5rem 6.9rem;
+	text-align: left;
+}
+
+.video-vetbollen > h3 {
+	text-align: left;
+	line-height: 1.6rem;
+	margin-bottom: .5rem;
+}
+
+.video-vetbollen > .video-play {
+	width: 1100px;
+	height: auto;
+}
+
+.nestkast-main > .hero-vogelvoer > a {
+	text-decoration: none;
+}
+
+.kaart1 {
+	float: left;
+  	width: 340px;
+	height: 340px;
+	margin: 1.25rem 1.25rem 1.25rem 1.25rem;
+	position: relative;
+	box-shadow: 3px 3px 9px rgba(21, 53, 83, 1);
+}
+
+.kaart1 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.kaart1 > figcaption > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.kaart1 > figcaption > a:hover {
+	color: #265783;
+}
+
+.kaart1 > a > img:hover{
+	opacity: 0.5;
+}
+
+.kaart1 > figcaption:hover {
+	opacity: 0.9;
+}
+
+.video-vetbollen > .video-play video {
+	width: 1100px;
+}
+
+.video-nestkast {
+	width: 100%;
+	height: auto;
+	padding: 3rem 6.9rem 5rem 6.9rem;
+	
+	
+}
+
+.video-nestkast > h3 {
+	text-align: left;
+	line-height: 1.6rem;
+	margin-bottom: .5rem;
+}
+
+.video-nestkast > .video-play {
+	width: 1100px;
+	height: 620px;
+}
+
+.video-nestkast > .video-play > iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.vogelfoto-main > .zangvogels3 {
+	padding: 5rem 5.6rem;
+}
+
+#imgUpload {
+	margin: 0 auto;
+	padding: 5rem 6.8rem 5rem 6.8rem;
+	background: #fdfdfd;
+}
+
+#imgUpload > fieldset {
+	width: 1100px;
+	margin: 1rem auto;
+	box-sizing: border-box;
+	box-shadow: 0px 3px 6px 0px rgba(21, 53, 83, 1);
+	color: #000;
+	padding: 1.5rem 5rem 1.5rem 5rem;
+	background: #fceee7
+}
+
+#imgUpload > fieldset > .legend {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: left;
+	color: #000;
+}
+
+#imgUpload > fieldset > #bestand > input,
+#imgUpload > fieldset > #foto > input,
+#imgUpload > fieldset > #details > input {
+	display: block;
+	width: 100%;
+	margin: 1rem auto;
+	padding: 1rem 1rem;
+}
+
+#imgUpload > fieldset > #bestand > #vogelimg, 
+#imgUpload > fieldset > #bestand > #vogelLabel{
+	display: none;
+}
+
+#imgUpload > fieldset > #bestand > #vogelLabel,
+#imgUpload > fieldset > #check > button {
+	width: 20%;
+	height: 36px;
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	font-size: 1rem;
+	overflow: visible;
+	user-select: none; 
+	margin: 1rem 0rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#imgUpload > fieldset > #bestand > #vogelLabel:hover,
+#imgUpload > fieldset > #check > button:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+#foto > textarea {
+	font-family: Andika;
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 1rem 1rem;
+}
+
+#foto > input::placeholder,
+#details > input::placeholder {
+	font-family: Andika;
+	margin-left: 1rem;
+}
+
+#foto  > textarea::placeholder {
+	font-family: Andika;
+}
+
+#imgUpload > fieldset > #details > input[type=text] {
+	float: left;
+}
+
+#imgUpload > fieldset > #details > #first-name,
+#imgUpload > fieldset > #details > #last-name  {
+	width: 379px;
+}
+
+#imgUpload > fieldset > #details > #first-name,
+#imgUpload > fieldset > #details > #tussen {
+	margin-right: 1rem;
+}
+
+#imgUpload > fieldset > #details > #tussen {
+	width: 150px;
+}
+ #check {
+	text-align: left;
+ }
+
+ #check > input {
+	margin: 1rem 1rem;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-auto-rows: minmax(150px, auto);
+	grid-gap: 10px;
+	margin: 0 auto;
+	padding: 8rem 6.9rem 5rem 6.9rem;
+	position: relative;
+	background: #fceee7;
+}
+
+.gallery .pic img {
+	width: 100%;
+	height: 100%;
+	box-shadow: 2px 2px 6px 0px rgba(21, 53, 83, 1);
+  	object-fit: cover;
+}
+
+.gallery > h3 {
+	position: absolute;
+	top: 5rem;
+	left: 6.9rem;
+}
+
+.one {
+	grid-column: 1/3;
+	grid-row: 1/5;
+	width: 360px;
+	height: 730px;
+}
+
+.two {
+	grid-column: 3/7;
+	grid-row: 1/3;
+	width: 730px;
+	height: 360px;
+}
+
+.three {
+	grid-column: 3/5;
+	grid-row: 3/5;
+	width: 360px;
+	height: 360px;
+}
+
+.four {
+	grid-column: 5/7;
+	grid-row: 3/7;
+	width: 360px;
+	height: 730px;
+}
+
+.five {
+	grid-column: 1/5;
+	grid-row: 5/7;
+	width: 730px;
+	height: 360px;
+}
+
+.hero-contact {
+	width: 100%;
+	height: 300px;
+	background-color: #ea974b;
+	background-image: url(../images/vogelgids/wilde-eend/wilde-eend-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: multiply;
+	text-align: left;
+	color: #fff;
+	padding: 5.4rem 6.9rem;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: minmax(20px, auto);
+}
+
+.hero-contact > h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	grid-column: 1 / 5;
+	grid-row: 1 / 3;
+}
+
+.hero-contact > h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 1.8rem;
+	color: #fff;
+	grid-column: 1 / 5;
+	grid-row: 4 / 5;
+	padding-top: .7rem;
+	text-align: left;
+	margin: 0;
+}
+
+.hero-contact .search-container {
+	justify-self: right;
+	grid-column: 8 / 11;
+	grid-row: 1 / 2;
+}
+
+.hero-contact input[type=text] {
+	width: 200px;
+	padding: .7rem 2rem;
+	margin-top: .5rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 25px 0px 0px 25px;
+	
+  }
+
+.hero-contact .search-container button {
+	float: right;
+	padding: .7rem 1rem;
+	margin-top: .5rem;
+	margin-right: 0px;
+	background: #ddd;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px 25px 25px 0px;
+}
+
+.hero-contact .search-container button:hover {
+	background: #4da1ee;
+}
+  
+
+.contactMode {
+	padding: 5rem 6.9rem;
+	position: relative;
+	text-align: left;
+	background-color: #ddd;
+	background-image: url(../images/vogelgids/kuif-eend/kuif-eend-bg.jpg);
+	background-position: center;
+	background-blend-mode: overlay;
+	/* opacity: 0.5; */
+}
+
+.contactMode .contact {
+	width: 260px;
+	height: 150px;
+	padding: 1.2rem 1.5rem;
+	margin-left: 1.2rem;
+	
+	color: #000;
+	text-align: left;
+	line-height: 2rem;
+	font-size: 1rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	background-color: rgba(247, 199, 170, .5);
+	float: left;
+}
+
+.contactMode .location {
+	margin: 0;
+}
+
+.contactMode .contact i {
+	font-size: 3.5rem;
+	font-weight: bold;
+	line-height: 2rem;
+	margin-right: 2rem;
+	float: left;
+}
+
+.contactMode .contact p {
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 2rem;
+}
+
+.contactMode .contact a {
+	color: #000;
+}
+
+.contactMode .contact a:hover {
+	color: #4da1ee;
+	
+}
+
+.contactText {
+	float: right;
+}
+
+.contactText > h3 {
+	margin: 0;
+}
+
+.media5 {
+	background-color: #fdfdfd;
+	padding: 5rem 6.9rem;
+	width: 100%;
+	margin: 0 auto;
+
+	/*overflow: hidden;*/
+}
+.media5 > .media5-form {
+	background-color: #fceee7;
+	color: #000;
+	width: 540px;
+	height: 500px;
+	padding: 2rem 2rem;
+	text-align: left;
+	float: left;
+	display: grid;
+	align-items: stretch;
+}
+
+#contactpForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(40px, auto) ;
+    grid-gap: .8rem;
+    background: #eee;
+    padding: 1.2em;
+}
+#contactpForm > input {
+    grid-column: span 1;
+    grid-row: auto;
+    padding: 1em;
+    border: none;
+}
+#contactpForm > textarea {
+	min-height: calc(100% - 2em);
+	height: 200px;
+	width: 100%;
+	padding: 1em;
+    border: none;
+	grid-column: 1 / 3;
+	grid-row: 3 / 6;
+}
+
+#contactpForm > input::placeholder,
+#contactpForm > textarea::placeholder {
+ 	font-family: Andika;
+}
+
+
+#contactpForm > button {
+	grid-column: 1 / 3;
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none; 
+}
+
+#contactpForm > button:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.media5 > .media5-map {
+	background-color: #B77539;
+	width: 540px;
+	height: 500px;
+	margin-right: 0rem;
+	float: right;
+}
+
+.media5 > .media5-map > iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.hero-info {
+	width: 100%;
+	height: 300px;
+	background-color: #ea974b;
+	background-image: url(../images/vogelgids/fuut/fuut-bg-01.jpg);
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: multiply;
+	text-align: left;
+	color: #fff;
+	padding: 5.4rem 6.9rem;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: minmax(20px, auto);
+}
+
+.hero-info > h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	grid-column: 1 / 5;
+	grid-row: 1 / 3;
+}
+
+.hero-info > h2 {
+	color: #fff;
+	grid-column: 1 / 5;
+	grid-row: 4 / 5;
+	padding-top: .7rem;
+	text-align: left;
+	margin: 0;
+}
+
+.hero-info .search-container {
+	justify-self: right;
+	grid-column: 8 / 11;
+	grid-row: 1 / 2;
+}
+
+.hero-info input[type=text] {
+	width: 200px;
+	padding: .7rem 2rem;
+	margin-top: .5rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 25px 0px 0px 25px;
+	
+  }
+
+.hero-info .search-container button {
+	float: right;
+	padding: .7rem 1rem;
+	margin-top: .5rem;
+	margin-right: 0px;
+	background: #ddd;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px 25px 25px 0px;
+}
+  
+.hero-info .search-container button:hover {
+	background: #4da1ee;
+}
+
+.hero-info .button1 {
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	grid-column: 9 / 11;
+	grid-row: 4 /5;
+	place-self: end;
+	text-decoration: none;
+}
+
+.hero-info .button1:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.websites {
+	padding: 3.75rem 5.6rem;
+	text-align: left;
+	background-color: #fdfdfd;
+
+}
+
+.websites > h3 {
+	margin: 1.3rem;
+	font-size: 2rem;
+}
+
+.site {
+	width: 340px;
+	height: 180px;
+	padding: 1rem 1rem;
+	margin: 1.25rem;
+	color: #000;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 2rem;
+	background-color: #f7c7aa;
+	background-blend-mode: multiply;
+	float: left;
+	display: grid;
+	place-content: center;
+}
+
+.site > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.site > a:hover {
+	color: #397BB7;
+}
+
+.vbescherming {
+	background-image: url(../images/vogelgids/knobbelzwaan/zwaan-bg.jpg);
+	background-position-x: left;
+}
+
+.kijken {
+	background-image: url(../images/vogelgids/knobbelzwaan/zwaan-bg.jpg);
+	background-position: top;
+}
+
+.ivn {
+	background-image: url(../images/vogelgids/knobbelzwaan/zwaan-bg.jpg);
+	background-position-x: right;
+}
+
+.texel {
+	background-image: url(../images/vogelgids/knobbelzwaan/zwaan-bg.jpg);
+	background-position: left;
+}
+
+.monumenten {
+	background-image: url(../images/vogelgids/knobbelzwaan/zwaan-bg.jpg);
+	background-position: center;
+}
+
+.gadgets {
+	background-image: url(../images/vogelgids/knobbelzwaan/zwaan-bg.jpg);
+	background-position: right;
+}
+
+.card-container4 {
+	padding: 5rem 6.7rem 5rem 6.9rem;
+	background-image: linear-gradient(rgba(247, 199, 170, 0.6), rgba(247, 199, 170, 0.6)), url("../images/vogelgids/kuif-eend/kuif-eend-bg-02.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.card-container4 h3 {
+	font-size: 2rem;
+	margin-bottom: 2.5rem;
+}
+
+.books {
+	padding: 5rem 6.1rem;
+}
+
+.books > h3 {
+	font-size: 2rem;
+	margin: 0rem .78rem 1rem .78rem;
+}
+
+.books > h4 {
+	font-size: 1.3rem;
+	text-align: left;
+	margin: 0rem .78rem;
+}
+
+.book-container {
+	float: left;
+	width: 200px;
+	height: 275px;
+	margin: 2.5rem .78rem;
+	color: #000;
+	position: relative;
+}
+
+.book-container > a > img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.book-container > a > img:hover {
+	opacity: 0.5;
+}
+
+.book-container > figcaption > a {
+	background-color: #ea974b;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	position: absolute;
+	width: 100%;
+	height: 48px;
+	bottom: -48px;
+	display: grid;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+.book-container > figcaption > a:hover {
+	color: #397BB7;
+	background-color: #f7c7aa;
+}
+
+.hero-herkenning {
+	width: 100%;
+	height: 400px;
+	padding: 9rem 6.9rem;
+	background-color: #b77539;
+	background-image: url(../images/vogelgids/kuif-eend/kuifeend-hero-02.jpg);
+	background-blend-mode: multiply;
+	background-size: cover;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: minmax(20px, auto);
+}
+
+.hero-herkenning  h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	line-height: 3.2rem;
+	text-align: left;
+	grid-column: 1 / 5;
+	grid-row: 1 / 3;
+}
+
+.hero-herkenning > h3 {
+	grid-column: 1 / 6;
+	grid-row: 4 / 5;
+	line-height: normal;
+	text-align: left;
+	margin: 0;
+}
+
+.hero-herkenning .search-container {
+	justify-self: right;
+	grid-column: 8 / 11;
+	grid-row: 1 / 2;
+
+}
+
+.hero-herkenning input[type=text] {
+	padding: .7rem 2rem;
+	margin-top: .5rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 25px 0px 0px 25px;
+}
+  
+.hero-herkenning .search-container button {
+	float: right;
+	padding: .7rem 1rem;
+	margin-top: .5rem;
+	margin-right: 0px;
+	background: #ddd;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px 25px 25px 0px;
+}
+  
+.hero-herkenning .search-container button:hover {
+	background: #4da1ee;
+}
+
+.hero-herkenning .button1 {
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	grid-column: 9 / 11;
+	grid-row: 4 /5;
+	place-self: end;
+	text-decoration: none;
+}
+
+.hero-herkenning .button1:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+ 
+
+.hero-herkenning > .clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.hero-herkenning > h2,
+.hero-herkenning > h3,
+.hero-herkenning > .search-button {
+	margin: 0;
+	color: #fff;
+}
+
+.hero-zang {
+	width: 100%;
+	height: 400px;
+	padding: 9rem 6.9rem;
+	background-color: #ea974b;
+	background-image: url(../images/vogelgids/merel/merel-bg.jpg);
+	background-blend-mode: multiply;
+	background-size: cover;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: minmax(80px, auto);
+
+}
+
+.hero-zang > h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	align-self: flex-start;
+}
+
+.hero-zang > h3 {
+	color: #fff;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	text-align: left;
+	margin: 0;
+	align-self: flex-end;
+}
+
+.hero-zang .search-container {
+	justify-self: right;
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
+	align-self: flex-start;
+}
+
+.hero-zang input[type=text] {
+	padding: .7rem 2rem;
+	margin-top: .5rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 25px 0px 0px 25px;
+}
+  
+.hero-zang .search-container button {
+	float: right;
+	padding: .7rem 1rem;
+	margin-top: .5rem;
+	margin-right: 0px;
+	background: #ddd;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px 25px 25px 0px;
+}
+  
+.hero-zang .search-container button:hover {
+	background: #4da1ee;
+}
+
+.hero-zang .button1 {
+	float: right;
+	background: linear-gradient(#4da1ee, #397BB7);
+	border: 1px solid #a2c5f5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	direction: ltr;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.47059;
+	width: 200px;
+	height: 32px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
+	place-self: end;
+	text-decoration: none;
+}
+
+.hero-zang .button1:hover {
+	background: linear-gradient(#b77539, #ea974b);
+	border: 1px solid #f7c7aa;
+}
+
+.zangvogels {
+	margin: 0;
+	padding: 4.3rem 5.6rem 5rem 5.6rem;
+	background-color: #e2ebfb;
+}
+
+.zangvogels > h3 {
+	text-align: center;
+}
+
+.gids {
+	margin: 0 auto
+
+}
+
+.zangvogels > .gids > .mos > a:hover{
+	opacity: 0.5;
+}
+
+.zangvogels  > .mos > a:hover{
+	opacity: 0.5;
+}
+
+.mos {
+	float: left;
+  	width: 340px;
+	height: 225px;
+	margin: 1.25rem 1.25rem 4.25rem 1.25rem;
+	object-fit: cover;
+	position: relative;
+}
+
+.mos img {
+	width: 100%;
+	height: 100%
+
+}
+
+.zangvogels > .mos {
+	text-align: center;
+}
+
+
+.vogelnaam {
+	width: 340px;
+	height:48px;
+	background-color: #ea974b;
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 48px;
+	position: absolute;
+	top: 225px;
+}
+
+.vogelnaam:hover {
+	opacity: 0.7;
+}
+
+
+.vogelnaam > a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.vogelnaam > a:hover {
+	color: #265783;
+}
+
+.hero-water {
+    width: 100%;
+    height: 400px;
+    padding: 9rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/watervogels-bg.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(80px, auto);
+
+}
+
+.hero-water > h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+}
+
+.hero-water > h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: left;
+    margin: 0;
+    align-self: flex-end;
+}
+
+.hero-water .search-container {
+    justify-self: right;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+}
+
+.hero-water input[type=text] {
+    padding: .7rem 2rem;
+    margin-top: .5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px 0px 0px 25px;
+}
+  
+.hero-water .search-container button {
+    float: right;
+    padding: .7rem 1rem;
+    margin-top: .5rem;
+    margin-right: 0px;
+    background: #ddd;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 25px 25px 0px;
+}
+  
+.hero-water .search-container button:hover {
+    background: #4da1ee;
+}
+
+.hero-water .button1 {
+    float: right;
+    background: linear-gradient(#4da1ee, #397BB7);
+    border: 1px solid #a2c5f5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    direction: ltr;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.47059;
+    width: 200px;
+    height: 32px;
+    overflow: visible;
+    padding: 4px 15px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    place-self: end;
+	text-decoration: none;
+}
+
+.hero-overig {
+    width: 100%;
+    height: 400px;
+    padding: 9rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/overige-vogels-bg.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(80px, auto);
+
+}
+
+.hero-overig > h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+}
+
+.hero-overig > h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    text-align: left;
+    margin: 0;
+    align-self: flex-end;
+}
+
+.hero-overig .search-container {
+    justify-self: right;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+}
+
+.hero-overig input[type=text] {
+    padding: .7rem 2rem;
+    margin-top: .5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px 0px 0px 25px;
+}
+  
+.hero-overig .search-container button {
+    float: right;
+    padding: .7rem 1rem;
+    margin-top: .5rem;
+    margin-right: 0px;
+    background: #ddd;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 25px 25px 0px;
+}
+  
+.hero-overig .search-container button:hover {
+    background: #4da1ee;
+}
+
+.hero-overig .button1 {
+    float: right;
+    background: linear-gradient(#4da1ee, #397BB7);
+    border: 1px solid #a2c5f5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    direction: ltr;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.47059;
+    width: 200px;
+    height: 32px;
+    overflow: visible;
+    padding: 4px 15px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    place-self: end;
+	text-decoration: none;
+}
+
+.zangvogels > .vogel7 {
+	margin: 1.25rem 1.25rem 3rem 25rem;
+}
+
+
+
+.hero-merel {
+    width: 100%;
+    height: 400px;
+    padding: 20rem 6.9rem 0rem 6.9rem;
+	margin: 0;
+    background-color: #B77539;
+    background-image: url(../images/vogelgids/merel/merel-bg-02.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.hero-merel > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+	line-height: 4rem;
+}
+
+.broed {
+	width: 100%;
+	background-color: #e2ebfb;
+	padding: 2rem 6.9rem 2rem 0rem;
+}
+
+.broed > ul {
+    color: #000;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+	float: left;
+	margin: 0;
+}
+
+.intro {
+	width: 100%;
+	background-color: #e2ebfb;
+	padding: 0rem 6.9rem 2rem 6.9rem;
+}
+
+.intro > p {
+    color: #000;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+	text-align: left;
+    float: left;
+	margin-top: .5rem;
+}
+
+.broed .search-container {
+    float: right;
+}
+
+.broed input[type=text] {
+    padding: .7rem 2rem;
+    margin-top: .5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px 0px 0px 25px;
+}
+  
+.broed .search-container button {
+    float: right;
+    padding: .7rem 1rem;
+    margin-top: .5rem;
+    margin-right: 0px;
+    background: #ddd;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 25px 25px 0px;
+}
+  
+.broed .search-container button:hover {
+    background: #4da1ee;
+}
+
+.vogel-txt {
+	width: 100%;
+	background-color: #e2ebfb;
+}
+
+
+.vogel-txt  > .descr1 {
+	font-size: 1.5rem;
+    text-align: left;
+    color: #000;
+	padding: 0rem 5.6rem 0rem 5.6rem;
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(280px, auto);
+}
+
+
+.descr1 > .afb2 {
+    text-align: center;
+	grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+	justify-self: center;
+}
+
+.descr1 > .herken {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+}
+
+.descr1 > .gedrag {
+	grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: flex-start;
+}
+
+.descr1 > .afb3 {
+    text-align: center;
+	grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: flex-start;
+	justify-self: center;
+}
+
+.descr1 > .geluid {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.descr1 > .habitat {
+	grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.opsom {
+	width: 340px;
+	height: 273px;
+	margin: 1.2rem;
+	object-fit: cover;
+	position: relative;
+	
+}
+
+.opsom > h3 {
+	color: #ea974b;
+	text-align: left;
+	font-size: 1.3rem;
+	line-height: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.opsom > p {
+	color: #000;
+	text-align: left;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+	margin-bottom: 1.2rem;
+}
+
+.descr2 {
+	padding: 1.2rem 6.9rem 5.25rem 6.9rem;
+	margin: 0;
+}
+
+.descr2 > .afb4 {
+	width: 530px;
+	height: 328px;
+	float: left;
+}
+
+.descr2 > .afb4 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.descr2 > .afb5 {
+	width: 530px;
+	height: 328px;
+	float: right;
+}
+
+.descr2 > .afb5 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.afb4,
+.afb5 {
+	position: relative;
+}
+
+.descr2 .caption1 {
+	width: 530px;
+	height: 48px;
+	background-color: #ea974b;
+	font-size: 1.3rem;
+	line-height: 48px;
+	position: absolute;
+	top: 328px;
+}
+
+.zangvogels2 {
+	margin: 0;
+	padding: 1rem 5.6rem;
+	background-color: #e2ebfb;
+}
+
+.zangvogels2 > h2 {
+	font-size: 2.2rem;
+	line-height: 2.5rem;
+}
+
+.zangvogels2 > h3 {
+	font-size: 1.3rem;
+	font-style: italic;
+	line-height: 2rem;
+}
+
+.zangvogels2 > h2,
+.zangvogels2 > h3 {
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+}
+
+.zangvogels3 {
+	margin: 0;
+	padding: 1rem 5.6rem 3rem 5.6rem;
+	background-color: #e2ebfb;
+}
+
+.zangvogels3 > h2 {
+	font-size: 2.2rem;
+	line-height: 2.5rem;
+}
+
+.zangvogels3 > h3 {
+	font-size: 1.3rem;
+	font-style: italic;
+	line-height: 2rem;
+}
+
+.zangvogels3 > h2,
+.zangvogels3 > h3 {
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+.caption2 {
+	width: 340px;
+	height:48px;
+	background-color: #ea974b;
+	font-size: 1.3rem;
+	line-height: 48px;
+	position: absolute;
+	top: 293px;
+}
+
+
+.hero-koolmees {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/koolmees/koolmees-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.hero-koolmees > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-pimpelmees {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/pimpelmees/pimpelmees-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.hero-pimpelmees > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-gaai {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/gaai/gaai-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.hero-gaai > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-huismus {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/huismus/huismus-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+	background-position: center;
+}
+
+.hero-huismus > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-putter {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/putter/putter-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.hero-putter > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+	text-align: center;
+}
+
+.hero-spreeuw {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/spreeuw/spreeuw-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.hero-spreeuw > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-roodborst {
+    width: 100%;
+    height: 400px;
+	padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/roodboorst/roodboorst-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.hero-roodborst > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-aalscholver {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/aalscholver/aalscholver-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-aalscholver > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-blauwereiger {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/blauwe-reiger/blauwe-reiger-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-blauwereiger > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-grauwegans {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/grauwe-gans/grauwe-gans-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-grauwegans > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-canadesegans {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/canadese-gans/canadese-gans-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-canadesegans > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-zilverreiger {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/grote-zilverreiger/grote-zilverreiger-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-zilverreiger > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-knobbelzwaan {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #f7c7aa;
+    background-image: url(../images/vogelgids/knobbelzwaan/knobbelzwaan-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-knobbelzwaan > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-kokmeeuw {
+    width: 100%;
+    height: 400px;
+	padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/kokmeeuw/kokmeeuw-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-kokmeeuw > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-kuifeend {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #f7c7aa;
+    background-image: url(../images/vogelgids/kuif-eend/kuifeend-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-kuifeend > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-meerkoet {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/meerkoet/meerkoet-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-meerkoet > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-scholekster {
+    width: 100%;
+    height: 400px;
+	padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/scholekster/scholekster-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-scholekster > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-waterhoen {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/waterhoen/waterhoen-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-waterhoen > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-wildeeend {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/wilde-eend/wilde-eend-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-wildeeend > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-fuut {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/fuut/fuut-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-fuut > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-ekster {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #fceee7;
+    background-image: url(../images/vogelgids/ekster/ekster-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+}
+
+.hero-ekster > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-houtduif {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #fceee7;
+    background-image: url(../images/vogelgids/houtduif/houtduif-hero.JPG);
+    background-blend-mode: multiply;
+    background-size: cover;
+	background-position: bottom;
+}
+
+.hero-houtduif > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-kauw {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/kauw/kauw-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+	background-position: bottom;
+}
+
+.hero-kauw > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-roek {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/roek/roek-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+	background-position: bottom;
+}
+
+.hero-roek > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-turksetortel {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/turkse-tortel/turkse-tortel-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+	background-position: bottom;
+}
+
+.hero-turksetortel > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-zwartekraai {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/zwarte-kraai/zwarte-kraai-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+	background-position: bottom;
+}
+
+.hero-zwartekraai > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-buizerd {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #ea974b;
+    background-image: url(../images/vogelgids/buizerd/buizerd-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+	background-position: bottom;
+}
+
+.hero-buizerd > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+
+.hero-winterkoning {
+    width: 100%;
+    height: 400px;
+    padding: 19rem 6.9rem 1rem 6.9rem;
+    background-color: #fceee7;
+    background-image: url(../images/vogelgids/winterkoning/winterkoning-hero.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+	background-position: bottom;
+}
+
+.hero-winterkoning > h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+	color: #fff;
+	text-align: center;
+}
+

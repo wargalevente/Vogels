@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>MM-A Activiteiten</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="../../css/css-reset.css" rel="stylesheet" type="text/css"><!-- CSS Reset van Eric Mayer: Dit document reset alle browser defaults -->
+	<link href="../../css/mma-styles.css" rel="stylesheet" type="text/css"><!-- CSS file met daarin mijn eigen vormgeving -->
+    
+</head>
+<body>
+     <!-- 12 column grid bekijk het commentaar van de homepagina. -->
+     
+     <!-- <input type="checkbox"> -->
+    <div class="wrapper">
+         <!-- <div id="grid">
+            <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+        </div> -->
+        <!-- Webpage header en navigatie hier neerzetten. -->
+        <!-- Bekijk het commentaar van de homepagina -->
+        <header>
+            <div id="logo">
+                <img src="../../images/logo/logo-vogels.svg" alt="logo">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../../index.htm" id="home">Home</a></li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-2" class="toggle">Vogelgids</label>
+                        <a href="../vogelgids/index.htm">Vogelgids <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-2">
+                        <ul>
+                            <li><a href="../vogelgids/herkenning.htm" id="recog">Herkenning</a></li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-5" class="toggle">Zangvogels</label>
+                                <a href="../vogelgids/zangvogels/index.htm">Zangvogels </a>
+                                <input type="checkbox" id="drop-5">
+                            </li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-4" class="toggle">Watervogels</label>
+                                <a href="../vogelgids/watervogels/index.htm">Watervogels</a>
+                                <input type="checkbox" id="drop-4">
+                            </li>
+                            <li>    
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-3" class="toggle">Overige vogels</label>
+                                <a href="../vogelgids/overige-vogels/index.htm">Overige vogels</a>
+                                <input type="checkbox" id="drop-3">
+                            </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-1" class="toggle">Activiteiten</label>
+                        <a href="index.htm" class="current">Activiteiten <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="vogelvoer.htm">Vogelvoer maken</a></li>
+                        <li><a href="vetbollen.htm">Vetbollen maken</a></li>
+                        <li><a href="nestkast.htm">Nestkast maken</a></li>
+                        <li><a href="vogelfotografie.htm">Vogelfotografie</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../contact/nuttige-info.htm">Nuttige Info</a></li>
+                  <li><a href="../contact/index.htm">Contact</a></li>
+                </ul>
+              </nav> 
+        </header>
+        <main>
+            <!-- Hero-image van de activiteit pagina is ook 1320px breed maar de hoogte wat kleiner (400px ipv 500px) dan de homepagina. De foto is een eigen foto. Ik heb mijn eigen foto's zo veel mogelijk gebruikt. Bijna altijd heb ik color overlay gebruikt om de letters beter leesbaar te maken. Daarvoor heb ik de background-image met  background-color en background-blend-mode gebruikt in CSS. -->
+
+            <div class="hero-activiteit">
+                <h1>Activiteiten voor kleine<br>vogelaars</h1>
+                <h2>Ga naar buiten<br>om vogels te spotten</h2>
+                <div class="search-button clearfix">
+
+                     <!-- Op de subpagina's heb ik een search-bar gebruikt op de hero-afbeelding of daarnaast eronder. -->
+                    <div class="search-container">
+                        <form action="/action_page.php">
+                          <input type="text" placeholder="Zoeken.." name="search">
+                          <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+        	    <a class="button1">Neem contact op</a>
+            </div>
+            <!-- Op alle subpagina's heb ik breadcrumb gebruikt om de wayfinding makkelijker te maken. Maar dat is wel handig in vogelgids onderdeel omdat daar de website soms drie- of vier-laag diep afhankelijk ervan of ze de homepagina meetelt. -->
+            
+            <div class="breadcrumb-bg">
+                <ul class="breadcrumb3">
+                    <li><a href="../../index.htm">Home</a></li>
+                    <li><a href="index.htm" class="current">Activiteiten</a></li>
+                  </ul>
+            </div>
+
+            <!-- Hier is er een klein fotomosaic van activiteiten met linken naar de relevante supagina's om de aandact van de bezoeker te trekken. -->
+            <!-- Hier heb ik ook float met clearfix gebruikt zoals het in les WDS129 werd weergegeven. -->
+
+            <div class="media3 clearfix">
+                <div class="media3-img1">
+                    <a href="nestkast.htm">
+                        <h3>Nestkast maken</h3>
+                    </a>
+                </div>
+                <div class="media3-imgbox">
+                    <div class="media3-img2">
+                        <a href="vogelvoer.htm">
+                            <h3>Vogelvoer maken</h3>
+                        </a>
+                    </div>
+                    <div class="media3-img3">
+                        <a href="vogelfotografie.htm">
+                            <h3>Vogelfotografie</h3>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+
+            
+            <!-- Met de plaatjes van de hele website heb ik heel vaak float met clearfix gebruikt zoals het in les WDS129 werd weergegeven. -->
+            <div class="text-box2 clearfix">
+                <div class="blok2-text">
+                    <h3>Spelletjes</h3>
+                    <h4>Memory spel, knutselen, quiz</h4>
+                    <h5>Ideetjes om spelletjes te doen:</h5>
+                    <ul>
+                        <li>knutselen</li>
+                        <li>kleuren</li>
+                        <li>memory spel</li>
+                        <li>quiz</li>
+                        <li>kaartspel</li>
+                        <li>diamond painting</li>
+                        <li>puzzelen</li>
+                        <li>vogelzang herkennen</li>
+                        <li>veren herkennen</li>
+                        <li>poten/voetafdruk herkennen</li>
+                    </ul>
+
+                    <!--  Helaas kon ik niet aparte pagina's maken voor alle activiteiten. Daaron heb ik absoluut linken van andere pagina's gebruikt. Maar dit gebeurt helemaal niet vaak. -->
+        
+                    <a href="https://www.ladylemonade.nl/vogel-knutselen-maken/" class="button2">Lees meer</a>           
+                </div>
+                <div class="blok2-img">
+                    <img src="../../images/activiteiten/spelletjes-unsplash.jpg" alt="spelen">
+                </div> 
+            </div>
+            <div class="text-box clearfix">
+                <div class="blok-img">
+                    <img src="../../images/activiteiten/birdwatcher.jpg" alt="vogelvoer">
+                </div>
+                <div class="blok-text">
+                    <h3>Vogelspotten</h3>
+                    <h4>Vogelspotten is Een leuke activiteit buiten</h4>
+                    <p>Vogelspotten is meer dan een hobby. Het is een activiteit niet alleen voor volwassenen, maar ook voor kinderen of de hele familie.  Als je vogels gaat observeren, kan je een eigen schrift van de vogels leggen, en  alles wat je opmerkt noteren.  Je kan schatten hoe groot de vogels zjn en ze vergelijken met andere vogels die jij kent. Daarnaast kan je bekijken het uiterlijk van de vogels, bijvoorbeeld hoe lang hun poten zijn, de veren, en veel meer.</p>
+                    <a href="https://www.vogelbescherming.nl/actueel/bericht/kinderen-op-vogelzoektocht" class="button1">Lees meer</a>           
+                </div>    
+            </div>
+
+            <!-- Net als op de homepagina is er op deze pagina ook een card container met three cards (rule of third). -->
+            
+            <div class="card-container2">
+                <div class="cards-head">
+                    <h3>Uitgelicht</h3>
+                    <h4>Ontdek vogels in je tuin en doe mee met activiteiten</h4>   
+                </div>
+                <div class="card-grid">
+                    <article class="card a">
+                        <div class="img-box">
+                            <a href="../vogelgids/watervogels/aalscholver.htm">
+                                <img src="../../images/vogelgids/aalscholver/aalscholver-stadshagen01.jpg" alt="reiger">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h4>Aalscholver</h4><br>
+                            <p>Aalscholvers  laten hun verenpak nat worden. De baarden van aan hun veren staan betrekkelijk ver uit elkaar.  Aalscholvers duiken vaak diep en jagen langdurig achter vis aan.</p><br>
+                            <a class="button3" href="../vogelgids/watervogels/aalscholver.htm">Lees meer</a>
+                        </div>
+                    </article>
+                    <article class="card b">
+                        <div class="img-box">
+                            <a href="../vogelgids/watervogels/grote-zilverreiger.htm">
+                                <img src="../../images/vogelgids/grote-zilverreiger/grote-zilverreiger.jpg" alt="vogelvoer">
+                            </a>
+                            </div>
+                        <div class="text">
+                            <h4>Grote zilverreiger</h4><br>
+                            <p>Grote zilverreiger zoeken hun eten vaak in ondiep water, maar ook op het land. Hun jachttechniek is eenvoudig: langdurig roerloos staan tot een klein dier in de buurt komt of heel rustig zijn prooi achtervolgen.</p><br>
+                            <a class="button3" href="../vogelgids/watervogels/grote-zilverreiger.htm">Lees meer</a>
+                        </div>
+                    </article>
+                    <article class="card c">
+                        <div class="img-box">
+                            <a href="../vogelgids/watervogels/wilde-eend.htm">
+                                <img src="../../images/vogelgids/wilde-eend/wilde-eend03.jpg" alt="rivier">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h4>Wilde eend</h4><br>
+                            <p>De wilde eend komt voor in stad en platteland in vijvers, meren, parken, sloten in akkers en weilanden. De soort is zeer tolerant ten aanzien van menselijke aanwezigheid of verstoring.</p><br>
+                            <a class="button3" href="../vogelgids/watervogels/wilde-eend.htm">Lees meer</a>
+                        </div>
+                    </article>
+                </div>
+                
+            </div>
+        </main>
+        <!-- Webpage footer hier neerzetten. -->
+        <!-- Bekijk het commentaar van de homepagina -->
+        <footer class="footer-container">
+            <div class="footer top">
+                
+            </div>
+            <div class="footer left">
+                <h3>Contact</h3>
+                <p>Neem contact met ons op</p>
+                <form class="contactForm">
+                    <label for="customer_name"></label>
+                    <input type="text" name="customer_name" id="customer_name" placeholder="Volle naam" required >
+                    <label for="email_address"></label>
+                    <input type="email" name="email_address" id="email_address" placeholder="Jouw email adres">
+                    <label for="comments"></label>
+                    <textarea name="comments" id="comments" maxlength="500" rows="5" cols="50" placeholder="Jouw bericht"></textarea>
+                    <button type="button">Bevestig</button>
+                  </form>
+            </div>
+            <div class="footer center">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="../../index.htm">Home</a></li>
+                    <li><a href="../vogelgids/index.htm">Vogelgids</a></li>
+                    <li><a class="current" href="index.htm">Activiteiten</a></li>
+                    <li><a href="../contact/nuttige-info.htm">Nuttige Info</a></li>
+                    <li><a href="../contact/index.htm">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer right">
+                <div id="logo-footer">
+                    <img src="../../images/logo/logo-vogels-footer.svg" alt="logo">
+                </div>
+                <div class="phone-footer">
+                    <span><i class="fa-solid fa-phone-flip"></i> &nbsp; 06 444 7777</span>
+                </div>
+                <div class="email-footer">
+                    <span><i class="fa-regular fa-envelope"></i> &nbsp; info@oudheid.com</span>
+                </div>
+                <div class="socials">
+                    <h4>Volg ons via social media</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    </div> 
+                </div>
+            </div>
+            <div class="footer rights">
+                <div class="rights">
+                    <ul class="copy-rights">
+                        <li>VogelsInDeAchtertuin</li>
+                        <li id="year">&copy; 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

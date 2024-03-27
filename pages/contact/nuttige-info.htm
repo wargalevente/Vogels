@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>MM-A Nuttige Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="../../css/css-reset.css" rel="stylesheet" type="text/css"><!-- CSS Reset van Eric Mayer: Dit document reset alle browser defaults -->
+	<link href="../../css/mma-styles.css" rel="stylesheet" type="text/css"><!-- CSS file met daarin mijn eigen vormgeving -->
+    
+</head>
+<body>
+
+    <!-- 12 column overlay. Om verder te lezen bekijk het commentaar op de homepagina. -->
+
+    <!-- <input type="checkbox"> -->
+    <div class="wrapper">
+        <!-- <div id="grid">
+            <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+        </div> -->
+        <!-- Webpage header en navigatie hier neerzetten. -->
+        <header>
+            <div id="logo">
+                <img src="../../images/logo/logo-vogels.svg" alt="logo">
+            </div>
+
+            <!-- Drop-down navigatie. Om verder te lezen bekijk het commentaar op de homepagina -->
+
+
+            <nav>
+                <ul class="menu">
+                    <li><a href="../../index.htm" id="home">Home</a></li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-2" class="toggle">Vogelgids</label>
+                        <a href="../vogelgids/index.htm">Vogelgids <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-2">
+                        <ul>
+                            <li><a href="../vogelgids/herkenning.htm" id="recog">Herkenning</a></li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-5" class="toggle">Zangvogels</label>
+                                <a href="../vogelgids/zangvogels/index.htm">Zangvogels</a>
+                                <input type="checkbox" id="drop-5">
+                            </li>
+                            <li>
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-4" class="toggle">Watervogels</label>
+                                <a href="../vogelgids/watervogels/index.htm">Watervogels</a>
+                                <input type="checkbox" id="drop-4">
+                            </li>
+                            <li>    
+                                <!-- De Tweede Laag Drop Down -->
+                                <label for="drop-3" class="toggle">Overige vogels</label>
+                                <a href="../vogelgids/overige-vogels/index.htm">Overige vogels</a>
+                                <input type="checkbox" id="drop-3">
+                            </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <!-- De Eerste Laag Drop Down -->
+                        <label for="drop-1" class="toggle">Activiteiten</label>
+                        <a href="../activiteiten/index.htm">Activiteiten <i class="fa-solid fa-caret-down"></i></a>
+                        <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="../activiteiten/vogelvoer.htm" class="current">Vogelvoer maken</a></li>
+                        <li><a href="../activiteiten/vetbollen.htm">Vetbollen maken</a></li>
+                        <li><a href="../activiteiten/nestkast.htm">Nestkast maken</a></li>
+                        <li><a href="../activiteiten/vogelfotografie.htm">Vogelfotografie</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="nuttige-info.htm" class="current">Nuttige Info</a></li>
+                  <li><a href="index.htm">Contact</a></li>
+                </ul>
+              </nav> 
+        </header>
+        <main>
+
+            <!-- Relatief kleine hero-image met een search-button en een contact button. Om verder te lezen bekijk het commentaar op de homepagina of op de activiteit pagina -->
+
+            <div class="hero-info">
+                <h1>Nuttige Info</h1>
+                <h2>Handige weebsites en locaties</h2>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Zoeken.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <a href="index.htm" class="button1">Neem contact op</a>
+        	</div>
+
+            <!-- Breadcrumb om wayfinding te verbeteren. -->
+
+            <div class="breadcrumb-bg">
+                <ul class="breadcrumb3">
+                    <li><a href="../../index.htm">Home</a></li>
+                    <li><a href="nuttige-info.htm" class="current">Nuttige Info</a></li>
+                </ul>
+            </div>
+
+            <!-- Nuttige websites worden hier weergegeven met float-clearfix en met een mooie background-image. -->
+
+            <div class="websites clearfix">
+                <h3>Websites</h3>
+                <div class="site vbescherming">
+                    <a href="https://www.vogelbescherming.nl/">Vogelbescherming Nederland</a>
+                </div>
+                <div class="site kijken">
+                    <a href="#">Vogelskijken</a>      
+                </div>
+                <div class="site ivn">
+                    <a href="https://www.ivn.nl/">Instituut Voor<br>Natuurbeschermings- educatie</a>
+                </div>
+                <div class="site texel">
+                    <a href="https://www.vogelinformatiecentrum.nl/">Vogel-<br>informatiecentrum<br>Texel</a>
+                </div>
+                <div class="site monumenten">
+                    <a href="https://www.natuurmonumenten.nl/">Natuurmonumenten</a>
+                </div>
+                <div class="site gadgets">
+                    <a href="https://natuurgadgets.nl/">Natuurgadgets</a>
+                </div>
+            </div>
+
+            <!-- Locaties in stadshagen en in de omgeving waar vogelspotten kan gedaan worden. -->
+
+            <div class="card-container2">
+                <div class="cards-head">
+                    <h3>Locaties om vogel te spotten</h3>   
+                </div>
+                <div class="card-grid">
+                    <article class="card a">
+                        <div class="img-box">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77625.29362181266!2d5.986700023360374!3d52.55531569791346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c875d0c2aad53d%3A0xd3118264e899b2b2!2sUiterwaarden%20Zwarte%20Water%20en%20Vecht!5e0!3m2!1snl!2snl!4v1708426743850!5m2!1snl!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="text">
+                            <h4>Uiterwaarden Zwarte Water en Vecht</h4><br>
+                            <p>Uiterwaarden Zwarte Water en Vecht is een Natura 2000-gebied (gebiedsnummer 36) in de Nederlandse provincie Overijssel met de classificatie 'rivierengebied'. Het beschermde gebied heeft een oppervlakte van 15,04 km².</p><br>
+                            <a class="button3" href="">Lees meer</a>
+                        </div>
+                    </article>
+                    <article class="card b">
+                        <div class="img-box">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19420.497100930326!2d6.014011204759548!3d52.52326277636389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7d9c9e006ecc1%3A0xed849c6faaa1f6d9!2sVogelkijkhut%20Vreugderijkerwaard!5e0!3m2!1snl!2snl!4v1708426269287!5m2!1snl!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="text">
+                            <h4>Vreugderijkerwaard</h4><br>
+                            <p>De Vreugderijkerwaard ligt net ten westen van Zwolle aan de noordoever van de rivier de IJssel, in de buurtschap Spoolde, tegenover het op de andere oever gelegen plaatsje Zalk. In het 97 hectare grote gebied dat eigendom is van Natuurmonumenten bevinden zich tot vijf meter hoge rivierduinen en een met de IJssel meestromende nevengeul.</p><br>
+                            <a class="button3" href="">Lees meer</a>
+                        </div>
+                    </article>
+                    <article class="card c">
+                        <div class="img-box">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4854.098341600714!2d6.055554193109607!3d52.53254452743741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7d8bdee6b76f7%3A0x14d56e9468e2743b!2sTwistvlietpark!5e0!3m2!1snl!2snl!4v1708426023117!5m2!1snl!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="text">
+                            <h4>Twistvlietpark</h4><br>
+                            <p>Het Twistvlietpark is een park in de nieuwbouwwijk Stadshagen, Zwolle, waar delen van het oorspronkelijke landschap zijn behouden. Zo is langs de oude Riete, het water dat nog steeds met een sluisje op het Zwarte Water uitkomt. Er zijn altijd hier een aantal vogelsoorten zoals kuifeend, blauwe reiger, grote zilverreiger, en fuut.</p><br>
+                            <a class="button3" href="">Lees meer</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Vogelgids en boeken over vogels die in de bibliotheek in Dtadshagen kan geleend worden -->
+
+            <div class="books">
+                <h3>Handige boeken voor kinderen</h3>
+                <h4>Deze booeken over vogels kan je in de bibliotheek lenen:</h4>
+                <figure class="book-container 01">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/2028358?offset=1&qs=Vogels%20spotten&search_in=iets&state=search">
+                        <img src="../../images/boeken/vogelspotter.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/2028358?offset=1&qs=Vogels%20spotten&search_in=iets&state=search">Vogels spotten</a>
+                    </figcaption>
+                </figure>
+                <figure class="book-container 02">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1592674?offset=0&qs=Vogels%20in%20je%20tuin&search_in=iets&state=search"><img src="../../images/boeken/vogels-in-je-tuin.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1592674?offset=0&qs=Vogels%20in%20je%20tuin&search_in=iets&state=search">
+                            Vogels in je tuin
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="book-container 03">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1745534?offset=1&qs=Vogelgids%20voor%20kids&search_in=titel&src=1&state=search">
+                        <img src="../../images/boeken/vogelgids-voor-kids.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1745534?offset=1&qs=Vogelgids%20voor%20kids&search_in=titel&src=1&state=search">
+                            Vogelgids voor kids
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="book-container 04">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/2030390?offset=0&qs=De%20slimste%20vogelgids&search_in=iets&state=search">
+                        <img src="../../images/boeken/slimste-vogelgids.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/2030390?offset=0&qs=De%20slimste%20vogelgids&search_in=iets&state=search">
+                            De slimste vogelgids<br>junior
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="book-container 05">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1586177?offset=0&qs=Hebben%20vogels%20knieen%3F&search_in=iets&state=search">
+                        <img src="../../images/boeken/hebben-vogels-knieen.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1586177?offset=0&qs=Hebben%20vogels%20knieen%3F&search_in=iets&state=search">
+                            Hebben vogels knieen?
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="book-container 06">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1749168?offset=0&qs=Het%20vrolijke%20vogel%20boek&search_in=iets&state=search">
+                        <img src="../../images/boeken/vrolijke-vogel-boek.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1749168?offset=0&qs=Het%20vrolijke%20vogel%20boek&search_in=iets&state=search">
+                            Het vrolijke vogel boek
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="book-container 07">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1590917?offset=0&qs=Het%20heel%20grote%20vogelboek&search_in=iets&state=search">
+                        <img src="../../images/boeken/heel-grote-vogelboek.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1590917?offset=0&qs=Het%20heel%20grote%20vogelboek&search_in=iets&state=search">
+                            Het heel grote vogelboek
+                        </a>
+                </figcaption>
+                </figure>
+                <figure class="book-container 08">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1672166?offset=0&qs=Het%20complete%20vogelboek&search_in=iets&state=search">
+                        <img src="../../images/boeken/complete-vogelboek.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/1672166?offset=0&qs=Het%20complete%20vogelboek&search_in=iets&state=search">
+                            Het complete vogelboek
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="book-container 09">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/2224200?offset=0&qs=Zie%20je%20ons%20vliegen%3F&search_in=iets&state=search">
+                        <img src="../../images/boeken/vogelkijkboek.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/2224200?offset=0&qs=Zie%20je%20ons%20vliegen%3F&search_in=iets&state=search">
+                            Zie je ons vliegen?
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="book-container 10">
+                    <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/2004196?offset=0&qs=Mijn%20eerste%20vogelboek&search_in=iets&state=search">
+                        <img src="../../images/boeken/mijn-eerste-vogelboek.gif" alt="boek">
+                    </a>
+                    <figcaption>
+                        <a href="https://rijnbrink.hostedwise.nl/wise-apps/catalog/3801/detail/wise/2004196?offset=0&qs=Mijn%20eerste%20vogelboek&search_in=iets&state=search">
+                            Mijn eerste vogelboek
+                        </a>
+                    </figcaption>
+                </figure>
+            </div>
+        </main>
+
+        <!-- Webpage footer hier neerzetten. -->
+
+        <!-- Om het commentaar over de footer te lezen bekijk het commentaar op de homepagina  -->
+
+
+        <footer class="footer-container">
+            <div class="footer top">
+                
+            </div>
+            <div class="footer left">
+                <h3>Contact</h3>
+                <p>Neem contact met ons op</p>
+                <form class="contactForm">
+                    <label for="customer_name"></label>
+                    <input type="text" name="customer_name" id="customer_name" placeholder="Volle naam" required >
+                    <label for="email_address"></label>
+                    <input type="email" name="email_address" id="email_address" placeholder="Jouw email adres">
+                    <label for="comments"></label>
+                    <textarea name="comments" id="comments" maxlength="500" rows="5" cols="50" placeholder="Jouw bericht"></textarea>
+                    <button type="button">Bevestig</button>
+                  </form>
+            </div>
+            <div class="footer center">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="../../index.htm">Home</a></li>
+                    <li><a href="../vogelgids/index.htm">Vogelgids</a></li>
+                    <li><a href="../activiteiten/index.htm">Activiteiten</a></li>
+                    <li><a href="nuttige-info.htm">Nuttige Info</a></li>
+                    <li><a href="index.htm" class="current">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer right">
+                <div id="logo-footer">
+                    <img src="../../images/logo/logo-vogels-footer.svg" alt="logo">
+                </div>
+                <div class="phone-footer">
+                    <span><i class="fa-solid fa-phone-flip"></i> &nbsp; 06 444 7777</span>
+                </div>
+                <div class="email-footer">
+                    <span><i class="fa-regular fa-envelope"></i> &nbsp; info@oudheid.com</span>
+                </div>
+                <div class="socials">
+                    <h4>Volg ons via social media</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    </div> 
+                </div>
+            </div>
+            <div class="footer rights">
+                <div class="rights">
+                    <ul class="copy-rights">
+                        <li>VogelsInDeAchtertuin</li>
+                        <li id="year">&copy; 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
